@@ -26,15 +26,12 @@ public class Library extends Application {
     public void start(Stage stage) throws Exception {
         
       
-<<<<<<< HEAD
+
        
 
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-=======
 
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
->>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
         
         Scene scene = new Scene(root);
         
