@@ -26,7 +26,7 @@ public class Library extends Application {
     public void start(Stage stage) throws Exception {
         
       
-        Parent root = FXMLLoader.load(getClass().getResource("BookView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Library_FXML.fxml"));
         
         Scene scene = new Scene(root);
         
