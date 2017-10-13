@@ -50,9 +50,7 @@ public class FXMLController implements Initializable {
     }
      @FXML
       private void handleListButtonAction(ActionEvent event) {
-<<<<<<< HEAD
 
-=======
  try {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
@@ -62,17 +60,16 @@ public class FXMLController implements Initializable {
         } catch(Exception e) {
            e.printStackTrace();
           }
->>>>>>> baca893d3a892663fbba3f8af9e03f2108338a62
+
        
     }
       @FXML
        private void handleStockButtonAction(ActionEvent event) {
          try {
-<<<<<<< HEAD
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stock.fxml"));
-=======
+
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
->>>>>>> baca893d3a892663fbba3f8af9e03f2108338a62
+
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
