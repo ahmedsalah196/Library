@@ -5,29 +5,29 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="645.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="library.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.FXMLController">
    <children>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="418.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="418.0" layoutY="229.0" onMouseClicked="#handleProfileButtonAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@users.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="123.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="123.0" layoutY="229.0" onMouseClicked="#handleSearchButtonAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@search.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="116.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="116.0" layoutY="22.0" onMouseClicked="#handleListButtonAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@clipboard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="418.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="418.0" layoutY="22.0" onMouseClicked="#handleStockButtonAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bookshelf.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="142.0" layoutY="162.0" onAction="#handleListButtonAction" text="Borrower's List" />
+      <JFXButton buttonType="RAISED" layoutX="132.0" layoutY="162.0" onAction="#handleListButtonAction" text="Borrower's List" />
       <JFXButton buttonType="RAISED" layoutX="456.0" layoutY="162.0" onAction="#handleStockButtonAction" text="Stock" />
       <JFXButton buttonType="RAISED" layoutX="161.0" layoutY="376.0" onAction="#handleSearchButtonAction" text="Search" />
       <JFXButton buttonType="RAISED" layoutX="467.0" layoutY="376.0" onAction="#handleProfileButtonAction" text="Profile" />
