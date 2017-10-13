@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.ExpansionPanel.CollapsedPanel?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -13,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.StockController">
    <children>
-      <JFXComboBox focusColor="#0e2e86" labelFloat="true" layoutX="480.0" layoutY="16.0" prefHeight="26.0" prefWidth="117.0" promptText="Sort By..." visibleRowCount="5" AnchorPane.bottomAnchor="446.0" AnchorPane.rightAnchor="95.0" />
+      <JFXComboBox layoutX="480.0" layoutY="16.0" prefHeight="26.0" prefWidth="117.0" promptText="Sort By..." visibleRowCount="5" AnchorPane.bottomAnchor="446.0" AnchorPane.rightAnchor="95.0" />
       <JFXTextField layoutX="14.0" layoutY="16.0" opacity="0.41" prefHeight="26.0" prefWidth="448.0" text="Search" />
       <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="428.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -26,7 +25,6 @@
             <Font name="System Bold" size="12.0" />
          </font></JFXButton>
       <ScrollBar layoutX="664.0" layoutY="82.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="14.0" />
-      <ExpansionPanel.CollapsedPanel layoutX="90.0" layoutY="153.0" prefWidth="252" />
       <Button layoutX="617.0" layoutY="94.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="7.0" text="Z" underline="true" wrapText="true" AnchorPane.rightAnchor="44.0" />
       <Button layoutX="67.0" layoutY="94.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="14.0" text="C" underline="true" />
       <Button layoutX="44.0" layoutY="94.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="7.0" text="B" underline="true" AnchorPane.rightAnchor="617.0" />
