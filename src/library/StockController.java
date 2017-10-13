@@ -12,7 +12,7 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author Farida Abouish
+ * @author sarah
  */
 public class StockController implements Initializable {
 

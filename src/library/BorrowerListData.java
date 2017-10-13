@@ -20,7 +20,11 @@ public class BorrowerListData {
     return data;
   }
 
-  
+  public BorrowerListData() {
+    data.add(new Borrower("Chris", "Evans","13/6/1981","chris.evans81@gmail.com","3405",25,false ));
+    data.add(new Borrower("Jennifer", "Aniston","11/2/1969","jen_aniston@gmail.com","3210",10,false ));
+   
     
-  
+  }
+
 }
