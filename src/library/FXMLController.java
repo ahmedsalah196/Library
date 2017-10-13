@@ -50,13 +50,21 @@ public class FXMLController implements Initializable {
     }
      @FXML
       private void handleListButtonAction(ActionEvent event) {
-
+ try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
        
     }
       @FXML
        private void handleStockButtonAction(ActionEvent event) {
          try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stock.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
