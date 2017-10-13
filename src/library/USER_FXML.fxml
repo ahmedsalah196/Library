@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="427.0" prefWidth="631.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.USER_Controller">
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="427.0" prefWidth="631.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.USER_Controller">
    <children>
       <Label id="background" layoutX="-4.0" prefHeight="441.0" prefWidth="631.0" />
       <ImageView fx:id="img" fitHeight="150.0" fitWidth="129.0" layoutX="54.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
@@ -22,7 +22,7 @@
             <HBox prefHeight="40.0" prefWidth="292.0">
                <children>
                   <Label prefHeight="48.0" prefWidth="186.0" text="First Name" textFill="#4e9e83" />
-                  <Label fx:id="fname" prefHeight="48.0" prefWidth="283.0" textFill="#c22d9f" />
+                  <Label fx:id="fname" prefHeight="48.0" prefWidth="283.0" text="John" textFill="#c22d9f" />
                </children>
             </HBox>
             <VBox prefHeight="203.0" prefWidth="292.0">
@@ -30,7 +30,7 @@
                   <HBox prefHeight="44.0" prefWidth="292.0">
                      <children>
                         <Label prefHeight="44.0" prefWidth="113.0" text="Last Name" textFill="#4e9e83" />
-                        <Label fx:id="lname" prefHeight="44.0" prefWidth="201.0" textFill="#c22d9f" />
+                        <Label fx:id="lname" prefHeight="44.0" prefWidth="201.0" text="Doe" textFill="#c22d9f" />
                      </children>
                   </HBox>
                   <VBox prefHeight="143.0" prefWidth="292.0">
@@ -38,19 +38,19 @@
                         <HBox prefHeight="40.0" prefWidth="292.0">
                            <children>
                               <Label prefHeight="43.0" prefWidth="124.0" text="Gender" textFill="#4e9e83" />
-                              <Label fx:id="gender" prefHeight="43.0" prefWidth="212.0" textFill="#c22d9f" />
+                              <Label fx:id="gender" prefHeight="43.0" prefWidth="212.0" text="Male" textFill="#c22d9f" />
                            </children>
                         </HBox>
                         <HBox prefHeight="43.0" prefWidth="292.0">
                            <children>
                               <Label prefHeight="59.0" prefWidth="99.0" text="Date of birth" textFill="#4e9e83" />
-                              <Label fx:id="dbirth" prefHeight="57.0" prefWidth="200.0" textFill="#c22d9f" />
+                              <Label fx:id="dbirth" prefHeight="57.0" prefWidth="200.0" text="14/6/1991" textFill="#c22d9f" />
                            </children>
                         </HBox>
                         <HBox prefHeight="38.0" prefWidth="292.0">
                            <children>
-                              <Label prefHeight="51.0" prefWidth="122.0" text="Expiration Date" textFill="#4e9e83" />
-                              <Label fx:id="dexpire" prefHeight="54.0" prefWidth="206.0" textFill="#c22d9f" />
+                              <Label prefHeight="51.0" prefWidth="122.0" text="ID Number" textFill="#4e9e83" />
+                              <Label fx:id="dexpire" prefHeight="54.0" prefWidth="206.0" text="234789020110" textFill="#c22d9f" />
                            </children>
                         </HBox>
                      </children>
@@ -62,7 +62,7 @@
       <HBox layoutX="227.0" layoutY="98.0" prefHeight="44.0" prefWidth="292.0">
          <children>
             <Label prefHeight="90.0" prefWidth="107.0" stylesheets="@main.css" text="Username" textFill="#4e9e83" />
-            <Label fx:id="uname" prefHeight="53.0" prefWidth="186.0" textFill="#c22d9f" />
+            <Label fx:id="uname" prefHeight="53.0" prefWidth="186.0" text="John_Doe91" textFill="#c22d9f" />
          </children>
       </HBox>
       <JFXBadge />
