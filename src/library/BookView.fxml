@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
+   <children>
+      <JFXTextArea fx:id="summ" layoutX="283.0" layoutY="91.0" maxWidth="390.0" minWidth="390.0" prefWidth="390.0" />
+      <Label id="t" fx:id="title" layoutX="81.0" layoutY="366.0" prefHeight="19.0" prefWidth="155.0" style="-fx-border-color: black;" />
+      <Label fx:id="Genre" layoutX="81.0" layoutY="394.0" prefHeight="17.0" prefWidth="111.0" style="-fx-border-color: black;" />
+      <Label fx:id="author" layoutX="81.0" layoutY="424.0" prefHeight="17.0" prefWidth="111.0" style="-fx-border-color: black;" />
+      <ImageView fx:id="cover" fitHeight="345.0" fitWidth="264.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="475.0" layoutY="357.0" prefHeight="17.0" prefWidth="35.0" text="ISBN:" />
+      <Label layoutX="31.0" layoutY="395.0" text="Genre:" />
+      <Label layoutX="28.0" layoutY="424.0" text="Author:" />
+      <Label layoutX="36.0" layoutY="367.0" text="Title:" />
+      <Label layoutX="455.0" layoutY="385.0" prefHeight="17.0" prefWidth="63.0" text="Publisher:" />
+      <Label layoutX="448.0" layoutY="415.0" prefHeight="17.0" prefWidth="77.0" text="Qunatity" />
+      <Label id="t" fx:id="isbn" layoutX="524.0" layoutY="356.0" prefHeight="19.0" prefWidth="111.0" style="-fx-border-color: black;" />
+      <Label id="t" fx:id="pub" layoutX="524.0" layoutY="384.0" prefHeight="19.0" prefWidth="111.0" style="-fx-border-color: black;" />
+      <Label id="t" fx:id="q" layoutX="524.0" layoutY="414.0" prefHeight="19.0" prefWidth="111.0" style="-fx-border-color: black;" />
+   </children>
+</AnchorPane>
