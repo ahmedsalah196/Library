@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
    <children>
       <JFXTextArea fx:id="summ" layoutX="283.0" layoutY="91.0" maxWidth="390.0" minWidth="390.0" prefWidth="390.0" />
       <Label id="t" fx:id="title" layoutX="81.0" layoutY="366.0" prefHeight="19.0" prefWidth="155.0" style="-fx-border-color: black;" />
