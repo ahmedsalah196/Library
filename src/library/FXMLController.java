@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package library;
 
-/**
- *
- * @author Yasmin
- */
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -71,6 +63,17 @@ try {
         } catch (Exception ex) {
             System.out.println(ex.toString());
         }
+
+ try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+
        
     }
       @FXML
@@ -88,6 +91,17 @@ try {
             System.out.println(ex.toString());
         }
        
+
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
+try{
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
        
     }
     
