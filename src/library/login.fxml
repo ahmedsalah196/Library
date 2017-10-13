@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-      <JFXButton buttonType="RAISED" layoutX="113.0" layoutY="363.0" prefHeight="33.0" prefWidth="136.0" ripplerFill="#3f21d7" style="-fx-background-color: #428bca;" styleClass="btn-primary" text="Sign in as Clerk" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="113.0" layoutY="363.0" prefHeight="33.0" prefWidth="150.0" ripplerFill="#3f21d7" style="-fx-background-color: #428bca;" styleClass="btn-primary" text="Sign in as Borrower" textFill="WHITE">
          <font>
             <Font name="Arial Hebrew Scholar" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="290.0" layoutY="365.0" prefHeight="33.0" prefWidth="171.0" ripplerFill="#3f21d7" style="-fx-background-color: #5bc0de;" styleClass="btn-info" text="Sign in as Technician" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="290.0" layoutY="365.0" prefHeight="33.0" prefWidth="171.0" ripplerFill="#3f21d7" style="-fx-background-color: #5bc0de;" styleClass="btn-info" text="Sign in as Librarian" textFill="WHITE">
          <font>
             <Font name="Arial Hebrew Scholar" size="14.0" />
          </font></JFXButton>
