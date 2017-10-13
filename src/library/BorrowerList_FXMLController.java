@@ -19,23 +19,6 @@ import javafx.scene.control.TableView;
  */
 public class BorrowerList_FXMLController implements Initializable {
 
-     @FXML // fx:id="fname"
-    private TableView<?> fname;
-
-    @FXML // fx:id="lname"
-    private TableColumn<?, ?> lname;
-
-    @FXML // fx:id="book"
-    private TableColumn<?, ?> book;
-
-    @FXML // fx:id="date"
-    private TableColumn<?, ?> date;
-    
-    @FXML // fx:id="returned"
-    private TableColumn<?, ?> returned;
-    
-     @FXML // fx:id="email"
-    private TableColumn<?, ?> email;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
