@@ -7,13 +7,11 @@ package library;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.event.*;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.fxml.*;
+import javafx.scene.*;
 import javafx.stage.Stage;
 
 /**
@@ -24,6 +22,7 @@ public class Library extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+<<<<<<< HEAD
         
       
 
@@ -33,8 +32,10 @@ public class Library extends Application {
 
 
         
+=======
+        Parent root = FXMLLoader.load(getClass().getResource("Library_FXML.fxml")); 
+>>>>>>> 71cd8ba1ab98c7e08ed3bba51b4fdffee071c59b
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
