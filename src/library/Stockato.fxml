@@ -14,7 +14,7 @@
 <AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.StockController">
    <children>
       <JFXComboBox focusColor="#0e2e86" labelFloat="true" layoutX="480.0" layoutY="16.0" prefHeight="26.0" prefWidth="117.0" promptText="Sort By..." visibleRowCount="5" AnchorPane.bottomAnchor="446.0" AnchorPane.rightAnchor="95.0" />
-      <JFXTextField layoutX="14.0" layoutY="16.0" prefHeight="26.0" prefWidth="448.0" text="Search" />
+      <JFXTextField layoutX="14.0" layoutY="16.0" opacity="0.41" prefHeight="26.0" prefWidth="448.0" text="Search" />
       <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="428.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@searchic.png" />
