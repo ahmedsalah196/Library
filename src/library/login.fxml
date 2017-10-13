@@ -3,11 +3,14 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
     <children>
+      <Label id="background" prefHeight="516.0" prefWidth="524.0" />
+      <JFXButton buttonType="RAISED" layoutX="113.0" layoutY="363.0" prefHeight="33.0" prefWidth="136.0" ripplerFill="#3f21d7" style="-fx-background-color: #428bca;" stylesheets="@main.css" text="Sign in as Clerk" textFill="WHITE"/>
       <JFXButton buttonType="RAISED" layoutX="113.0" layoutY="363.0" prefHeight="33.0" prefWidth="150.0" ripplerFill="#3f21d7" style="-fx-background-color: #428bca;" styleClass="btn-primary" text="Sign in as Borrower" textFill="WHITE">
          <font>
             <Font name="Arial Hebrew Scholar" size="14.0" />
