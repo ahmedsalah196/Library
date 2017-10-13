@@ -33,10 +33,14 @@ public class BorrowerList_FXMLController implements Initializable {
     
     @FXML // fx:id="returned"
     private TableColumn<?, ?> returned;
+    
+     @FXML // fx:id="email"
+    private TableColumn<?, ?> email;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
     }    
     
 }
