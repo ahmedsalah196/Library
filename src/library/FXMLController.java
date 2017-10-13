@@ -13,31 +13,79 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class FXMLController implements Initializable {
    
     
-
-    
     @FXML
     private void handleSearchButtonAction(ActionEvent event) {
-        System.out.println("search");
+         try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Search.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
        
     }
     @FXML
      private void handleProfileButtonAction(ActionEvent event) {
-         System.out.println("profile");
+          try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("USER_FXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
        
     }
      @FXML
       private void handleListButtonAction(ActionEvent event) {
-         System.out.println("list");
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
+ try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+
        
     }
       @FXML
        private void handleStockButtonAction(ActionEvent event) {
-         System.out.println("stock");
+         try {
+
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
+
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
        
     }
     
