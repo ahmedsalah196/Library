@@ -4,16 +4,23 @@ package library;
 import com.jfoenix.controls.JFXTextArea;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.event.EventType;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -50,15 +57,25 @@ Book b = new Book("The Three Musketeers","Alexandre Dumas",des,"13j3n32","Fictio
 
     @Override
     public void initialize(URL url, ResourceBundle rb)  {
-        
-        
        System.out.println("hi");
-
-     
-     
        ini();
     }    
-    
+    @FXML
+    private void back(ActionEvent event){
+        try {
+            Parent clerkRoot = FXMLLoader.load(getClass().getResource("Search.fxml"));
+            
+            Scene clerkScene = new Scene(clerkRoot);
+            String css=Library.class.getResource("main.css").toExternalForm();
+            clerkScene.getStylesheets().add(css);
+            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            clerkStage.setScene(clerkScene);
+            clerkStage.show();
+        } catch (IOException ex) {
+         
+            System.out.println(ex.toString());
+        }
+    }
      @FXML
     private void ini()  {
        
@@ -74,6 +91,5 @@ Book b = new Book("The Three Musketeers","Alexandre Dumas",des,"13j3n32","Fictio
      
         
     }
-    
-    
+     
 }

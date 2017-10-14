@@ -22,11 +22,17 @@ public class Library extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Library_FXML.fxml")); 
+         Parent root1 = FXMLLoader.load(getClass().getResource("BookView.fxml")); 
+        Scene scene1 = new Scene(root1);
+        stage.setScene(scene1);
+        stage.show();
+        stage.setResizable(false);
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); 
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
+
     }
 
     /**

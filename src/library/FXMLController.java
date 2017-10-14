@@ -48,6 +48,7 @@ try {
         }
        
     }
+     
      @FXML
       private void handleListButtonAction(ActionEvent event) {
 
@@ -63,16 +64,6 @@ try {
         } catch (Exception ex) {
             System.out.println(ex.toString());
         }
-
- try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
 
        
     }
@@ -90,18 +81,6 @@ try {
         } catch (IOException ex) {
             System.out.println(ex.toString());
         }
-       
-
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
-try{
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
        
     }
     
