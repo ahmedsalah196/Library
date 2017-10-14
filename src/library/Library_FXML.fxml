@@ -7,12 +7,12 @@
 
 <AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.FXMLController">
    <children>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="419.0" layoutY="236.0" onMouseClicked="#handleProfileButtonAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="418.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@users.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="123.0" layoutY="229.0" onMouseClicked="#handleSearchButtonAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="123.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@search.png" />
          </image>
@@ -22,7 +22,7 @@
             <Image url="@clipboard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="418.0" layoutY="22.0" onMouseClicked="#handleStockButtonAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="418.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bookshelf.png" />
          </image>

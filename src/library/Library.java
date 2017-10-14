@@ -27,7 +27,7 @@ public class Library extends Application {
         stage.setScene(scene1);
         stage.show();
         stage.setResizable(false);
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml")); 
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

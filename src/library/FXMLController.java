@@ -82,7 +82,26 @@ try {
             System.out.println(ex.toString());
         }
        
+       }   
+         @FXML
+       private void bookbutton(ActionEvent event) {
+         try {
+
+
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookView.fxml"));
+
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+       
     }
+       
+       
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
