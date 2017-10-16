@@ -15,6 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
@@ -31,14 +32,32 @@ public class LoginController implements Initializable {
     @FXML
     private void handleLibrarianButtonAction(ActionEvent event) {
        try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Library_FXML.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
+            Parent clerkRoot = FXMLLoader.load(getClass().getResource("Library_FXML.fxml"));
+            
+            Scene clerkScene = new Scene(clerkRoot);
+            String css=Library.class.getResource("main.css").toExternalForm();
+            clerkScene.getStylesheets().add(css);
+            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            clerkStage.setScene(clerkScene);
+            clerkStage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
+       
+    }
+    @FXML
+    private void handleBorrowerButtonAction(ActionEvent event) {
+       try {
+            Parent clerkRoot = FXMLLoader.load(getClass().getResource("USER_FXML.fxml"));
+            Scene clerkScene = new Scene(clerkRoot);
+            String css=Library.class.getResource("main.css").toExternalForm();
+            clerkScene.getStylesheets().add(css);
+            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            clerkStage.setScene(clerkScene);
+            clerkStage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
        
     }
     @Override
