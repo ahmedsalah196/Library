@@ -3,25 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/USER_FXML.fxml</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/login.fxml</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/main.css</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/BorrowerListData.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/BookViewController.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/BookView.fxml</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/Search.fxml</file>
-=======
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/BorrowerList_FXML.fxml</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Library.java</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/login.fxml</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Book.java</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/LoginController.java</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/BorrowerListData.java</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/FXMLController.java</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Borrower.java</file>
-            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/BorrowerList_FXMLController.java</file>
->>>>>>> 0efbdd065aa494bdf8b83defbecb92eee16fe9f7
+            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BorrowerList_FXMLController.java</file>
         </group>
     </open-files>
 </project-private>
