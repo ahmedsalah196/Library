@@ -29,7 +29,7 @@ public class Library extends Application {
       str.toLowerCase();
      ObservableList<info> searched= FXCollections.observableArrayList();
          for (Book book : bookList) {
-             String title = book.Title;
+             String title = book.Title.toLowerCase();
               int cnt=0;
              for(int i=0;i<title.length()-str.length()+1;i++){
                  if(cnt==-1)break;

@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.VBox;
 
 class info{
     String ISBN,Title,Genre;
@@ -41,7 +42,11 @@ public class StockController1 implements Initializable {
         System.out.println("library.StockController1.searchBook()");
         Library searchable=new Library();
         //result.getItems().clear();
+        System.out.println(input.getText());
         ObservableList <info> returned = searchable.search(input.getText());
-        result.setItems(returned);
+        for(info in:returned){
+            System.out.println(in.Title);
+        }
+        result.setItems(returned);       
 }
 }
