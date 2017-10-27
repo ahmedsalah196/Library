@@ -12,9 +12,9 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author sarah
+ * @author LoayHamdy
  */
-public class StockController implements Initializable {
+public class StockController1 implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -23,5 +23,7 @@ public class StockController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+    public void searchBook(){
+
+}
 }
