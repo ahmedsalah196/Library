@@ -17,18 +17,16 @@ public class Borrower {
     public String birthdate;
     public String email;
     public String cardNumber;
-    public int numOfBooks;
-    boolean blacklisted;
+    public int numOfBooks = 0;
+    boolean blacklisted = false;
     public ArrayList<Book> borrowHistory = new ArrayList<Book>();
     
-    public Borrower(String f, String l, String b, String e, String c, int n, boolean bl){
+    public Borrower(String f, String l, String b, String e, String c){
     this.firstName=f;
     this.lastName=l;
     this.birthdate=b;
     this.email=e;
     this.cardNumber=c;
-    this.numOfBooks=n;
-    this.blacklisted=bl;
     }
     
     public void borrowBook(Book b){
