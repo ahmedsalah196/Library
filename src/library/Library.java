@@ -22,7 +22,7 @@ public class Library extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-<<<<<<< HEAD
+
         
       
 
@@ -32,9 +32,9 @@ public class Library extends Application {
 
 
         
-=======
-        Parent root = FXMLLoader.load(getClass().getResource("Library_FXML.fxml")); 
->>>>>>> 71cd8ba1ab98c7e08ed3bba51b4fdffee071c59b
+
+        
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

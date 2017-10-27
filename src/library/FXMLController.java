@@ -51,8 +51,7 @@ try {
      @FXML
       private void handleListButtonAction(ActionEvent event) {
 
-<<<<<<< HEAD
-=======
+
         try {
             Parent clerkRoot = FXMLLoader.load(getClass().getResource("BorrowerList_FXML.fxml"));
             
@@ -65,7 +64,7 @@ try {
         } catch (Exception ex) {
             System.out.println(ex.toString());
         }
->>>>>>> 71cd8ba1ab98c7e08ed3bba51b4fdffee071c59b
+
 
  try {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
@@ -95,20 +94,9 @@ try {
         }
        
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 71cd8ba1ab98c7e08ed3bba51b4fdffee071c59b
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
-try{
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
+
        
     }
        
