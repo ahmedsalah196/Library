@@ -4,6 +4,8 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,7 +15,7 @@
         <URL value="@main.css" />
     </stylesheets>
    <children>
-      <Label layoutY="-1.0" prefHeight="400.0" prefWidth="601.0" text=" " />
+      <Label layoutY="-1.0" prefHeight="536.0" prefWidth="793.0" text=" " />
       <JFXTextField labelFloat="true" layoutX="52.0" layoutY="27.0" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
       <ImageView fitHeight="43.0" fitWidth="53.0" layoutX="345.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -21,5 +23,12 @@
          </image>
       </ImageView>
       <JFXButton layoutX="345.0" layoutY="27.0" onAction="#searchBook" prefHeight="31.0" prefWidth="43.0" text=" " />
+      <TableView layoutX="15.0" layoutY="90.0" prefHeight="411.0" prefWidth="748.0">
+        <columns>
+          <TableColumn prefWidth="85.0" text="ISBN" />
+          <TableColumn prefWidth="534.0" text="Title" />
+            <TableColumn prefWidth="127.0" text="Genre" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
