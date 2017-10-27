@@ -23,7 +23,18 @@ public class Library extends Application {
     
      public static ArrayList<Book> bookList = new ArrayList<Book>();
      public static ArrayList<Borrower> users = new ArrayList<Borrower>();
-    @Override
+     public ArrayList<Book> search(String str){
+     ArrayList<Book> searched= new ArrayList<>();
+         for (Book book : bookList) {
+             for(int i=0;i<book.Title.length();i++){
+                 for(int j=0;j<str.length();j++){
+                     
+                 }
+             }
+         }
+         return searched;
+     }
+     @Override
     public void start(Stage stage) throws Exception {
                 String des = "One of the most celebrated and popular historical romances ever written. The Three Musketeers tell the story of the early adventures of the young Gascon gentleman d'Artagnan and his three friends from the regiment of the King's Musketeers: Athos, Porthos, and Aramis.\n" +
 "\n" +
