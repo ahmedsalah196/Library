@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.RegUsersController">
-    
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.RegUsersController">
+   <children>
+      <JFXButton layoutX="419.0" layoutY="305.0" onAction="#reg" prefHeight="25.0" prefWidth="125.0" text="Register New User" />
+      <JFXTextField fx:id="lname" layoutX="34.0" layoutY="91.0" promptText="Last Name" />
+      <JFXTextField fx:id="bdate" layoutX="34.0" layoutY="139.0" promptText="BirthDate" />
+      <JFXTextField fx:id="email" layoutX="34.0" layoutY="200.0" promptText="Email " />
+      <JFXTextField fx:id="num" layoutX="34.0" layoutY="259.0" promptText="Card Number" />
+      <JFXTextField fx:id="fname" layoutX="34.0" layoutY="45.0" promptText="First Name" />
+   </children>
 </AnchorPane>

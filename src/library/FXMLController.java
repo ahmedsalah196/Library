@@ -101,16 +101,18 @@ try {
        @FXML
        
         private void openReg(ActionEvent event) {
-         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RegUsers.fxml"));
-
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
+       try {
+            Parent clerkRoot = FXMLLoader.load(getClass().getResource("RegUsers.fxml"));
+            
+            Scene clerkScene = new Scene(clerkRoot);
+            String css=Library.class.getResource("main.css").toExternalForm();
+            clerkScene.getStylesheets().add(css);
+            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            clerkStage.setScene(clerkScene);
+            clerkStage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
        
         }
     
