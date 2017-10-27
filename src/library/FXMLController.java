@@ -48,10 +48,14 @@ try {
         }
        
     }
+     
      @FXML
       private void handleListButtonAction(ActionEvent event) {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 42455e9d4d3c6e746ae4577a954fcad0f6d9ac3b
         try {
             Parent clerkRoot = FXMLLoader.load(getClass().getResource("BorrowerList_FXML.fxml"));
             
@@ -64,6 +68,7 @@ try {
         } catch (Exception ex) {
             System.out.println(ex.toString());
         }
+<<<<<<< HEAD
 
 
  try {
@@ -75,6 +80,8 @@ try {
         } catch(Exception e) {
            e.printStackTrace();
           }
+=======
+>>>>>>> 42455e9d4d3c6e746ae4577a954fcad0f6d9ac3b
 
        
     }
@@ -93,6 +100,7 @@ try {
             System.out.println(ex.toString());
         }
        
+<<<<<<< HEAD
 
 
 
@@ -100,6 +108,9 @@ try {
        
     }
        
+=======
+       }   
+>>>>>>> 42455e9d4d3c6e746ae4577a954fcad0f6d9ac3b
          @FXML
        private void bookbutton(ActionEvent event) {
          try {
