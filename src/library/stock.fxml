@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.StockController1">
+    <stylesheets>
+        <URL value="@main.css" />
+    </stylesheets>
+   <children>
+      <Label layoutY="-1.0" prefHeight="400.0" prefWidth="601.0" text=" " />
+      <JFXTextField labelFloat="true" layoutX="52.0" layoutY="27.0" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
+      <ImageView fitHeight="43.0" fitWidth="53.0" layoutX="345.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@searchbook.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="345.0" layoutY="27.0" onAction="#searchBook" prefHeight="31.0" prefWidth="43.0" text=" " />
+   </children>
+</AnchorPane>
