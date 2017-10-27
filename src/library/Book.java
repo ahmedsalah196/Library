@@ -7,6 +7,7 @@ package library;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import javafx.scene.image.Image;
+import java.util.Calendar;
 
 /**
  *
@@ -23,6 +24,9 @@ public class Book {
     public String cover;
     public float rating;
     public Image image;
+    public Calendar borrowDate;
+    public Calendar returnDate;
+    
     
     
     public Book (String t , String a , String d , String i ,String g,String p, String image){
@@ -49,6 +53,8 @@ public class Book {
     public void checkAvaialbilty(){
         
     }
+    
+    
     
     
     

@@ -5,6 +5,8 @@
  */
 package library;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Yasmin
@@ -17,6 +19,7 @@ public class Borrower {
     public String cardNumber;
     public int numOfBooks;
     boolean blacklisted;
+    public ArrayList<Book> borrowHistory = new ArrayList<Book>();
     
     public Borrower(String f, String l, String b, String e, String c, int n, boolean bl){
     this.firstName=f;
@@ -26,5 +29,11 @@ public class Borrower {
     this.cardNumber=c;
     this.numOfBooks=n;
     this.blacklisted=bl;
+    }
+    
+    public void borrowBook(Book b){
+        if(!blacklisted){
+            borrowHistory.add(b);
+        }
     }
 }
