@@ -52,10 +52,6 @@ try {
      @FXML
       private void handleListButtonAction(ActionEvent event) {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 42455e9d4d3c6e746ae4577a954fcad0f6d9ac3b
         try {
             Parent clerkRoot = FXMLLoader.load(getClass().getResource("BorrowerList_FXML.fxml"));
             
@@ -68,20 +64,6 @@ try {
         } catch (Exception ex) {
             System.out.println(ex.toString());
         }
-<<<<<<< HEAD
-
-
- try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-=======
->>>>>>> 42455e9d4d3c6e746ae4577a954fcad0f6d9ac3b
 
        
     }
@@ -99,24 +81,12 @@ try {
         } catch (IOException ex) {
             System.out.println(ex.toString());
         }
-       
-<<<<<<< HEAD
-
-
-
-
-       
+        
     }
-       
-=======
-       }   
->>>>>>> 42455e9d4d3c6e746ae4577a954fcad0f6d9ac3b
+
          @FXML
        private void bookbutton(ActionEvent event) {
          try {
-
-
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookView.fxml"));
 
                 Parent root1 = (Parent) fxmlLoader.load();
