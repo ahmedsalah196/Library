@@ -5,9 +5,12 @@
  */
 package library;
 
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
 
 /**
  * FXML Controller class
@@ -15,15 +18,19 @@ import javafx.fxml.Initializable;
  * @author LoayHamdy
  */
 public class StockController1 implements Initializable {
-
-    /**
-     * Initializes the controller class.
-     */
+    private TableView<Book> result;
+    private JFXTextField input;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     public void searchBook(){
-
+        
+        System.out.println("library.StockController1.searchBook()");
+        Library searchable=new Library();
+        ArrayList <Book> returned = searchable.search(input.getText());
+        for (Book book : returned) {
+            result.getItems().add(book);
+        }
 }
 }

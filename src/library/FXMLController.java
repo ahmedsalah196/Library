@@ -70,7 +70,7 @@ try {
       @FXML
        private void handleStockButtonAction(ActionEvent event) {
          try {
-            Parent clerkRoot = FXMLLoader.load(getClass().getResource("Stockato.fxml"));
+            Parent clerkRoot = FXMLLoader.load(getClass().getResource("stock.fxml"));
             
             Scene clerkScene = new Scene(clerkRoot);
             String css=Library.class.getResource("main.css").toExternalForm();

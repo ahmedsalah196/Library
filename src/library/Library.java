@@ -26,9 +26,18 @@ public class Library extends Application {
      public ArrayList<Book> search(String str){
      ArrayList<Book> searched= new ArrayList<>();
          for (Book book : bookList) {
-             for(int i=0;i<book.Title.length();i++){
+             String title = book.Title;
+              int cnt=0;
+             for(int i=0;i<title.length()-str.length()+1;i++){
+                 if(cnt==-1)break;
+                 cnt=0;
                  for(int j=0;j<str.length();j++){
-                     
+                    if(str.charAt(j)==title.charAt(i+j))cnt++;
+                    if(cnt==str.length()){
+                        cnt=-1;
+                        searched.add(book);
+                        break;
+                    }
                  }
              }
          }
