@@ -23,5 +23,7 @@ public class StockController1 implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
+    public void searchBook(){
+
+}
 }
