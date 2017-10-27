@@ -16,7 +16,7 @@
     </stylesheets>
    <children>
       <Label layoutY="-1.0" prefHeight="536.0" prefWidth="793.0" text=" " />
-      <JFXTextField labelFloat="true" layoutX="52.0" layoutY="27.0" onAction="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
+      <JFXTextField fx:id="input" labelFloat="true" layoutX="52.0" layoutY="27.0" onAction="#searchBook" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
       <ImageView fitHeight="43.0" fitWidth="53.0" layoutX="345.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@searchbook.png" />
@@ -25,9 +25,9 @@
       <JFXButton layoutX="345.0" layoutY="27.0" onAction="#searchBook" prefHeight="31.0" prefWidth="43.0" text=" " />
       <TableView fx:id="result" layoutX="15.0" layoutY="90.0" prefHeight="411.0" prefWidth="748.0">
         <columns>
-          <TableColumn prefWidth="85.0" text="ISBN" />
-          <TableColumn prefWidth="534.0" text="Title" />
-            <TableColumn prefWidth="127.0" text="Genre" />
+          <TableColumn fx:id="isbn" prefWidth="85.0" text="ISBN" />
+          <TableColumn fx:id="title" prefWidth="534.0" text="Title" />
+            <TableColumn fx:id="genre" prefWidth="127.0" text="Genre" />
         </columns>
       </TableView>
    </children>

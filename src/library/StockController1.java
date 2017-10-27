@@ -10,16 +10,24 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-/**
- * FXML Controller class
- *
- * @author LoayHamdy
- */
+class info{
+    String ISBN,Title,Genre;
+
+    public info(String ISBN, String Title, String Genre) {
+        this.ISBN = ISBN;
+        this.Title = Title;
+        this.Genre = Genre;
+    }
+    
+}
 public class StockController1 implements Initializable {
-    private TableView<Book> result;
+    private TableView<info> result;
     private JFXTextField input;
+    private TableColumn isbn,title,genre;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -28,9 +36,9 @@ public class StockController1 implements Initializable {
         
         System.out.println("library.StockController1.searchBook()");
         Library searchable=new Library();
-        ArrayList <Book> returned = searchable.search(input.getText());
+        ArrayList <Book> returned = searchable.search(input.getPromptText());
         for (Book book : returned) {
-            result.getItems().add(book);
-        }
+            result.getItems().add(0,new info(book.ISBN,book.Title,book.Genre));
+                    }
 }
 }
