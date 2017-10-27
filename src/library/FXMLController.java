@@ -98,8 +98,21 @@ try {
           }
        
     }
+       @FXML
        
+        private void openReg(ActionEvent event) {
+         try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RegUsers.fxml"));
+
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
        
+        }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
