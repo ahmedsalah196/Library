@@ -9,6 +9,8 @@ import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -25,20 +27,21 @@ class info{
     
 }
 public class StockController1 implements Initializable {
+    @FXML
     private TableView<info> result;
+    @FXML
     private JFXTextField input;
+    @FXML
     private TableColumn isbn,title,genre;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
     public void searchBook(){
         
         System.out.println("library.StockController1.searchBook()");
         Library searchable=new Library();
-        ArrayList <Book> returned = searchable.search(input.getPromptText());
-        for (Book book : returned) {
-            result.getItems().add(0,new info(book.ISBN,book.Title,book.Genre));
-                    }
+        //result.getItems().clear();
+        ObservableList <info> returned = searchable.search(input.getText());
+        result.setItems(returned);
 }
 }

@@ -8,12 +8,14 @@ package library;
 import java.util.ArrayList;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+import javafx.collections.FXCollections;
 import javafx.event.*;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.Stage;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -23,8 +25,9 @@ public class Library extends Application {
     
      public static ArrayList<Book> bookList = new ArrayList<Book>();
      public static ArrayList<Borrower> users = new ArrayList<Borrower>();
-     public ArrayList<Book> search(String str){
-     ArrayList<Book> searched= new ArrayList<>();
+     public ObservableList<info> search(String str){
+      str.toLowerCase();
+     ObservableList<info> searched= FXCollections.observableArrayList();
          for (Book book : bookList) {
              String title = book.Title;
               int cnt=0;
@@ -32,10 +35,10 @@ public class Library extends Application {
                  if(cnt==-1)break;
                  cnt=0;
                  for(int j=0;j<str.length();j++){
-                    if(str.charAt(j)==title.charAt(i+j))cnt++;
+                      if(str.charAt(j)==title.charAt(i+j)||str.charAt(j)==title.charAt(i+j)-32)cnt++;
                     if(cnt==str.length()){
                         cnt=-1;
-                        searched.add(book);
+                        searched.add(new info(book.ISBN,book.Title,book.Genre));
                         break;
                     }
                  }
