@@ -10,7 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.StockController1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.StockController1">
     <stylesheets>
         <URL value="@main.css" />
     </stylesheets>
@@ -30,5 +30,7 @@
             <TableColumn fx:id="genre" prefWidth="127.0" text="Genre" />
         </columns>
       </TableView>
+      <JFXButton layoutX="658.0" layoutY="30.0" onAction="#openBook" text="Open Book" />
+      <JFXTextField fx:id="bookISBN" layoutX="490.0" layoutY="27.0" promptText="ISBN" />
    </children>
 </AnchorPane>
