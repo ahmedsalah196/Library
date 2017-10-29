@@ -48,8 +48,24 @@ public class StockController1 implements Initializable {
         title.setCellValueFactory(cellData -> cellData.getValue().getTitle());
         genre.setCellValueFactory(cellData -> cellData.getValue().getGenre());
         isbn.setCellValueFactory(cellData -> cellData.getValue().getISBN());
-        
-fill();
+       fill();
+       result.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+           FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("BookView.fxml"));
+            try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+           BookViewController d = loader.getController();
+      System.out.println(newSelection.getISBN().getValue());
+                d.getBook(newSelection.getISBN().getValue());
+         Parent root1 = loader.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+   
+});
     }    
     private void fill(){
         ObservableList <info> content=FXCollections.observableArrayList();
@@ -67,7 +83,6 @@ fill();
         if(newText.isEmpty())fill();
                 else{
         Library searchable=new Library();
-        System.out.println(newText);
         ObservableList <info> returned = searchable.search(newText);
         result.setItems(returned);
         }
@@ -80,11 +95,7 @@ fill();
            FXMLLoader loader = new FXMLLoader();
            loader.setLocation(getClass().getResource("BookView.fxml"));
          try {
-             loader.load();
-          
-        
-     
-                
+             loader.load();       
         } catch(Exception e) {
            e.printStackTrace();
           }
@@ -95,7 +106,7 @@ fill();
          Parent root1 = loader.getRoot();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
-                stage.showAndWait();
+                stage.show();
    
        
     }

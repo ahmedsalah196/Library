@@ -89,7 +89,7 @@ Label pub;
     @FXML
     private void back(ActionEvent event){
         try {
-            Parent clerkRoot = FXMLLoader.load(getClass().getResource("Search.fxml"));
+            Parent clerkRoot = FXMLLoader.load(getClass().getResource("stock.fxml"));
             
             Scene clerkScene = new Scene(clerkRoot);
             String css=Library.class.getResource("main.css").toExternalForm();
