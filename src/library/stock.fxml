@@ -15,8 +15,14 @@
         <URL value="@main.css" />
     </stylesheets>
    <children>
-      <Label layoutY="-1.0" prefHeight="536.0" prefWidth="793.0" text=" " />
-      <JFXTextField fx:id="input" labelFloat="true" layoutX="52.0" layoutY="27.0" onAction="#searchBook" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
+       <ImageView fitHeight="27.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@left-arrow.png" />
+         </image>
+         </ImageView>
+       
+      <Label prefHeight="536.0" prefWidth="793.0" text=" " />
+      <JFXTextField fx:id="input" labelFloat="true" layoutX="52.0" layoutY="27.0" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
       <ImageView fitHeight="43.0" fitWidth="53.0" layoutX="345.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@searchbook.png" />
@@ -30,5 +36,8 @@
             <TableColumn fx:id="genre" prefWidth="127.0" text="Genre" />
         </columns>
       </TableView>
+      <JFXButton layoutX="658.0" layoutY="30.0" onAction="#openBook" text="Open Book" />
+      <JFXTextField fx:id="bookISBN" labelFloat="true" layoutX="490.0" layoutY="27.0" promptText="ISBN" />
+      <JFXButton onAction="#back" prefHeight="25.0" prefWidth="27.0" text=" " />
    </children>
 </AnchorPane>

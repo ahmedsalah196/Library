@@ -12,11 +12,6 @@
             <Image url="@users.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="77.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@search.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="68.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@clipboard.png" />
@@ -29,17 +24,17 @@
       </ImageView>
       <JFXButton buttonType="RAISED" layoutX="77.0" layoutY="164.0" onAction="#handleListButtonAction" text="Borrower's List" />
       <JFXButton buttonType="RAISED" layoutX="495.0" layoutY="164.0" onAction="#handleStockButtonAction" text="Stock" />
-      <JFXButton buttonType="RAISED" layoutX="115.0" layoutY="556.0" onAction="#handleSearchButtonAction" text="Search" />
       <JFXButton buttonType="RAISED" layoutX="493.0" layoutY="543.0" onAction="#handleProfileButtonAction" text="Profile" />
       <JFXButton layoutX="453.0" layoutY="406.0" onAction="#handleProfileButtonAction" opacity="0.0" prefHeight="128.0" prefWidth="138.0" text=" " />
-      <ImageView fx:id="reg" fitHeight="96.0" fitWidth="144.0" layoutX="272.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true"> 
+      <ImageView fx:id="reg" fitHeight="96.0" fitWidth="144.0" layoutX="60.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true"> 
         <image> <Image url="@boy_1.png" />  
         </image>
        </ImageView>
-      <JFXButton layoutX="256.0" layoutY="347.0" onAction="#openReg" text="Register New User" />
       <JFXButton layoutX="453.0" layoutY="42.0" onAction="#handleStockButtonAction" opacity="0.0" prefHeight="111.0" prefWidth="128.0" text=" " />
       <JFXButton fx:id="register" layoutX="283.0" layoutY="234.0" opacity="0.0" prefHeight="96.0" prefWidth="79.0" text=" " />
-      <JFXButton layoutX="77.0" layoutY="419.0" onAction="#handleSearchButtonAction" opacity="0.0" prefHeight="128.0" prefWidth="128.0" text=" " />
+      <JFXButton layoutX="71.0" layoutY="406.0" onAction="#handleSearchButtonAction" opacity="0.0" prefHeight="96.0" prefWidth="79.0" text=" " />
+      <JFXButton layoutX="42.0" layoutY="521.0" onAction="#openReg" text="Register New User" />
+      <JFXButton layoutX="458.0" layoutY="29.0" onAction="#handleStockButtonAction" opacity="0.0" prefHeight="111.0" prefWidth="128.0" text=" " />
       <JFXButton layoutX="69.0" layoutY="20.0" onAction="#handleListButtonAction" opacity="0.0" prefHeight="128.0" prefWidth="128.0" text=" " />
    </children>
 </AnchorPane>

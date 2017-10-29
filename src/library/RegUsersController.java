@@ -59,4 +59,20 @@ public class RegUsersController implements Initializable {
        }
     }
     
+      @FXML
+    private void back(ActionEvent event){
+        try {
+            Parent clerkRoot = FXMLLoader.load(getClass().getResource("Library_FXML.fxml"));
+            
+            Scene clerkScene = new Scene(clerkRoot);
+            String css=Library.class.getResource("main.css").toExternalForm();
+            clerkScene.getStylesheets().add(css);
+            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            clerkStage.setScene(clerkScene);
+            clerkStage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
+    }
+    
 }
