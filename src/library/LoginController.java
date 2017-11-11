@@ -5,6 +5,7 @@
  */
 package library;
 
+import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -28,7 +29,8 @@ import javafx.stage.StageStyle;
  * @author ahmedsalah
  */
 public class LoginController implements Initializable {
-
+    @FXML
+    private JFXTextField loginID;
     @FXML
     private void handleLibrarianButtonAction(ActionEvent event) {
        try {
@@ -47,18 +49,22 @@ public class LoginController implements Initializable {
     }
     @FXML
     private void handleBorrowerButtonAction(ActionEvent event) {
-       try {
-            Parent clerkRoot = FXMLLoader.load(getClass().getResource("USER_FXML.fxml"));
-            Scene clerkScene = new Scene(clerkRoot);
-            String css=Library.class.getResource("main.css").toExternalForm();
-            clerkScene.getStylesheets().add(css);
-            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
-            clerkStage.setScene(clerkScene);
-            clerkStage.show();
-        } catch (IOException ex) {
-            System.out.println(ex.toString());
-        }
-       
+       FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("UserMenu.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+             UserMenuController d = loader.getController();
+      //System.out.println(loginID.getText());
+                d.getUser(loginID.getText());
+         Parent root1 = loader.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+   
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -53,7 +53,7 @@ public class RegUsersController implements Initializable {
      @FXML
 
     private void reg(ActionEvent event){
-       Library.users.add(new Borrower(fname.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText()));
+       Library.users.add(new Borrower(fname.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),"changethis"));
        for(int i = 0 ; i <Library.users.size();i++){
            System.out.print(Library.users.get(i).firstName);
        }
