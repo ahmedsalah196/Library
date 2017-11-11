@@ -26,6 +26,7 @@ public class Book {
     public Image image;
     public Calendar borrowDate;
     public Calendar returnDate;
+    public Boolean available = true;
     
     
     
