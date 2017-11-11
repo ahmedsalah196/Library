@@ -36,7 +36,6 @@ public class SearchController implements Initializable {
     private void back(ActionEvent event){
         try {
             Parent clerkRoot = FXMLLoader.load(getClass().getResource("Library_FXML.fxml"));
-            
             Scene clerkScene = new Scene(clerkRoot);
             String css=Library.class.getResource("main.css").toExternalForm();
             clerkScene.getStylesheets().add(css);

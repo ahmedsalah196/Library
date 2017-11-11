@@ -43,8 +43,6 @@ public class StockController1 implements Initializable {
     private TableColumn<info, String> isbn,title,genre;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        input.deselect();
-       //isbn.setCellValueFactory(new PropertyValueFactory<>("ISBN"));
         title.setCellValueFactory(cellData -> cellData.getValue().getTitle());
         genre.setCellValueFactory(cellData -> cellData.getValue().getGenre());
         isbn.setCellValueFactory(cellData -> cellData.getValue().getISBN());
@@ -56,17 +54,16 @@ public class StockController1 implements Initializable {
              loader.load();       
         } catch(Exception e) {
            e.printStackTrace();
-          }
-           BookViewController d = loader.getController();
-      System.out.println(newSelection.getISBN().getValue());
+        }
+            BookViewController d = loader.getController();
+            System.out.println(newSelection.getISBN().getValue());
                 d.getBook(newSelection.getISBN().getValue());
-         Parent root1 = loader.getRoot();
+                Parent root1 = loader.getRoot();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));  
                 stage.show();
-   
 });
-    }    
+    }   
     private void fill(){
         ObservableList <info> content=FXCollections.observableArrayList();
         ArrayList<Book> blist=Library.bookList;
