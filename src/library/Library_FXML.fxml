@@ -17,20 +17,20 @@
             <Image url="@clipboard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="387.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="380.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bookshelf.png" />
          </image>
       </ImageView>
       <JFXButton buttonType="RAISED" layoutX="76.0" layoutY="173.0" onAction="#handleListButtonAction" text="Borrower's List" textFill="#a0a2ab" />
-      <JFXButton buttonType="RAISED" layoutX="429.0" layoutY="173.0" onAction="#handleStockButtonAction" text="Stock" textFill="#a0a2ab" />
+      <JFXButton buttonType="RAISED" layoutX="422.0" layoutY="173.0" onAction="#handleStockButtonAction" text="Stock" textFill="#a0a2ab" />
       <JFXButton buttonType="RAISED" layoutX="416.0" layoutY="459.0" onAction="#handleProfileButtonAction" text="Profile" textFill="#a0a2ab" />
       <JFXButton layoutX="376.0" layoutY="322.0" onAction="#handleProfileButtonAction" opacity="0.0" prefHeight="128.0" prefWidth="138.0" text=" " />
       <ImageView fx:id="reg" fitHeight="96.0" fitWidth="144.0" layoutX="73.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true"> 
         <image> <Image url="@boy_1.png" />  
         </image>
        </ImageView>
-      <JFXButton layoutX="387.0" layoutY="51.0" onAction="#handleStockButtonAction" opacity="0.0" prefHeight="111.0" prefWidth="128.0" text=" " />
+      <JFXButton layoutX="380.0" layoutY="51.0" onAction="#handleStockButtonAction" opacity="0.0" prefHeight="110.0" prefWidth="128.0" text=" " />
       <JFXButton layoutX="84.0" layoutY="331.0" onAction="#handleSearchButtonAction" opacity="0.0" prefHeight="96.0" prefWidth="79.0" text=" " />
       <JFXButton layoutX="55.0" layoutY="446.0" onAction="#openReg" text="Register New User" textFill="#a0a2ab" />
       <JFXButton layoutX="68.0" layoutY="29.0" onAction="#handleListButtonAction" opacity="0.0" prefHeight="128.0" prefWidth="128.0" text=" " />

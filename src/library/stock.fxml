@@ -17,15 +17,15 @@
    <children>
        <ImageView fitHeight="27.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@left-arrow.png" />
+            <Image url="@return-button.png" />
          </image>
          </ImageView>
        
-      <Label prefHeight="536.0" prefWidth="793.0" text=" " />
-      <JFXTextField fx:id="input" labelFloat="true" layoutX="52.0" layoutY="27.0" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
+      <Label prefHeight="536.0" prefWidth="793.0" style="-fx-background-color: #2d3447;" text=" " />
+      <JFXTextField fx:id="input" focusColor="#a0a2ab" layoutX="52.0" layoutY="27.0" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." />
       <ImageView fitHeight="43.0" fitWidth="53.0" layoutX="345.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@searchbook.png" />
+            <Image url="@opened-book-with-a-magnifier.png" />
          </image>
       </ImageView>
       <JFXButton layoutX="345.0" layoutY="27.0" onAction="#searchBook" prefHeight="31.0" prefWidth="43.0" text=" " />
@@ -37,7 +37,7 @@
         </columns>
       </TableView>
       <JFXButton layoutX="658.0" layoutY="30.0" onAction="#openBook" text="Open Book" />
-      <JFXTextField fx:id="bookISBN" labelFloat="true" layoutX="490.0" layoutY="27.0" promptText="ISBN" />
+      <JFXTextField fx:id="bookISBN" focusColor="#a0a2ab" layoutX="490.0" layoutY="27.0" promptText="ISBN" />
       <JFXButton onAction="#back" prefHeight="25.0" prefWidth="27.0" text=" " />
    </children>
 </AnchorPane>

@@ -6,24 +6,24 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.RegUsersController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="595.0" style="-fx-background-color: #2d3347;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.RegUsersController">
    <children>
        <ImageView fitHeight="27.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@left-arrow.png" />
+            <Image url="@return-button.png" />
          </image>
          </ImageView>
        
        
-      <JFXButton layoutX="395.0" layoutY="278.0" onAction="#reg" prefHeight="25.0" prefWidth="125.0" text="Register New User" />
+      <JFXButton layoutX="395.0" layoutY="278.0" onAction="#reg" prefHeight="27.0" prefWidth="150.0" ripplerFill="#06236f" style="-fx-background-color: #00e699;" text="Register New User" textFill="#2d3447" />
       <JFXTextField fx:id="lname" layoutX="34.0" layoutY="91.0" promptText="Last Name" />
-      <JFXTextField fx:id="bdate" layoutX="34.0" layoutY="139.0" promptText="BirthDate" />
+      <JFXTextField fx:id="bdate" layoutX="34.0" layoutY="139.0" promptText="Birth Date" />
       <JFXTextField fx:id="email" layoutX="34.0" layoutY="200.0" promptText="Email " />
       <JFXTextField fx:id="num" layoutX="34.0" layoutY="259.0" promptText="Card Number" />
       <JFXTextField fx:id="fname" layoutX="34.0" layoutY="45.0" promptText="First Name" />
       <ImageView fitHeight="190.0" fitWidth="186.0" layoutX="365.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-           <Image url="@reg.png" />
+           <Image url="@papers.png" />
       </ImageView>
-      <JFXButton layoutX="1.0" layoutY="1.0" onAction="#back" prefHeight="25.0" prefWidth="20.0" />
+      <JFXButton layoutX="1.0" layoutY="1.0" onAction="#back" prefHeight="25.0" prefWidth="20.0" text=" " />
    </children>
 </AnchorPane>

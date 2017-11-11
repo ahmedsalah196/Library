@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="594.0" style="-fx-background-color: #2d3447#333;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.LoginController">
     <children>
-      <JFXButton id="background" layoutX="113.0" layoutY="398.0" onAction="#handleBorrowerButtonAction" prefHeight="33.0" prefWidth="150.0" ripplerFill="#535252" style="-fx-background-color: #2d3447;" styleClass="btn-primary" stylesheets="@main.css" text="Sign in as Borrower" textFill="#a0a2ab">
+      <JFXButton layoutX="113.0" layoutY="398.0" onAction="#handleBorrowerButtonAction" prefHeight="33.0" prefWidth="150.0" ripplerFill="#535252" style="-fx-background-color: #2d3447;" text="Sign in as Borrower" textFill="#a0a2ab">
          <font>
             <Font name="Arial Hebrew Scholar" size="14.0" />
          </font>
@@ -30,17 +30,17 @@
          </font></JFXPasswordField>
       <ImageView fitHeight="113.0" fitWidth="194.0" layoutX="224.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/books.png" />
+            <Image url="@books.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="167.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/users.png" />
+            <Image url="@users.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="26.0" fitWidth="39.0" layoutX="167.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/locked-4.png" />
+            <Image url="@locked.png" />
          </image>
       </ImageView>
       <Label layoutX="281.0" layoutY="152.0" text="Lib" textFill="#42cdaf">

@@ -9,35 +9,35 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
+<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="645.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
    <children>
       <ImageView fitHeight="36.0" fitWidth="41.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@left-arrow.png" />
+            <Image url="@return-button.png" />
          </image>
       </ImageView>
       <ImageView fx:id="cover" fitHeight="345.0" fitWidth="264.0" layoutX="367.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXTextArea fx:id="summ" layoutX="26.0" layoutY="150.0" maxWidth="390.0" minWidth="313.0" prefHeight="179.0" prefWidth="330.0" />
+      <JFXTextArea fx:id="summ" layoutX="26.0" layoutY="150.0" maxWidth="390.0" minWidth="313.0" prefHeight="179.0" prefWidth="330.0" style="-fx-background-color: #2d3447;" />
       <VBox layoutX="55.0" layoutY="413.0" prefHeight="99.0" prefWidth="223.0">
          <children>
             <HBox prefHeight="112.0" prefWidth="100.0">
                <children>
-                  <Label prefHeight="17.0" prefWidth="52.0" text="Title:" />
-                  <Label id="t" fx:id="title" prefHeight="19.0" prefWidth="155.0" style="-fx-border-color: #000080;" />
+                  <Label prefHeight="17.0" prefWidth="52.0" text="Title:" textFill="#a0a2ab" />
+                  <Label id="t" fx:id="title" prefHeight="19.0" prefWidth="155.0" style="-fx-border-color: black;" textFill="#a0a2ab" />
                </children>
             </HBox>
             <VBox prefHeight="139.0" prefWidth="223.0">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="53.0" text="Genre:" />
-                        <Label fx:id="Genre" prefHeight="19.0" prefWidth="154.0" style="-fx-border-color: #000080;" />
+                        <Label prefHeight="17.0" prefWidth="53.0" text="Genre:" textFill="#a0a2ab" />
+                        <Label fx:id="Genre" prefHeight="19.0" prefWidth="154.0" style="-fx-border-color: black;" textFill="#a0a2ab" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="54.0" text="Author:" />
-                        <Label fx:id="author" prefHeight="19.0" prefWidth="152.0" style="-fx-border-color: #000080;" />
+                        <Label prefHeight="17.0" prefWidth="54.0" text="Author:" textFill="#a0a2ab" />
+                        <Label fx:id="author" prefHeight="19.0" prefWidth="152.0" style="-fx-border-color: black;" textFill="#a0a2ab" />
                      </children>
                   </HBox>
                </children>
@@ -48,28 +48,28 @@
          <children>
             <HBox prefHeight="112.0" prefWidth="100.0">
                <children>
-                  <Label prefHeight="17.0" prefWidth="81.0" text="ISBN:" />
-                  <Label id="t" fx:id="isbn" prefHeight="19.0" prefWidth="164.0" style="-fx-border-color: #000080;" />
+                  <Label prefHeight="17.0" prefWidth="81.0" text="ISBN:" textFill="#a0a2ab" />
+                  <Label id="t" fx:id="isbn" prefHeight="19.0" prefWidth="164.0" style="-fx-border-color: black;" textFill="#a0a2ab" />
                </children>
             </HBox>
             <VBox prefHeight="139.0" prefWidth="223.0">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="69.0" text="Publisher:" />
-                        <Label fx:id="pub" prefHeight="19.0" prefWidth="155.0" style="-fx-border-color: #000080;" />
+                        <Label prefHeight="17.0" prefWidth="69.0" text="Publisher:" textFill="#a0a2ab" />
+                        <Label fx:id="pub" prefHeight="19.0" prefWidth="155.0" style="-fx-border-color: black;" textFill="#a0a2ab" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="69.0" text="Quantity" />
-                        <Label fx:id="q" prefHeight="19.0" prefWidth="157.0" style="-fx-border-color: #000080;" />
+                        <Label prefHeight="17.0" prefWidth="69.0" text="Quantity" textFill="#a0a2ab" />
+                        <Label fx:id="q" prefHeight="19.0" prefWidth="157.0" style="-fx-border-color: black;" textFill="#a0a2ab" />
                      </children>
                   </HBox>
                </children>
             </VBox>
          </children>
       </VBox>
-      <JFXButton layoutX="-5.0" layoutY="-2.0" onAction="#back" opacity="0.0" prefHeight="42.0" prefWidth="45.0" text=" " />
+      <JFXButton layoutX="-5.0" layoutY="-2.0" onAction="#back" prefHeight="42.0" prefWidth="45.0" text=" " />
    </children>
 </AnchorPane>
