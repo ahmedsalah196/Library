@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/FXMLController.java</file>
             <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/Library.java</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/RegUsersController.java</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/BookViewController.java</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/StockController1.java</file>
-=======
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/SearchController.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/Library.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/StockController1.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/stock.fxml</file>
->>>>>>> 73345b634c2c0f2f138ff88869b0679dfd7a27df
+            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/Book.java</file>
+            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/main.css</file>
+            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/UserMenu.fxml</file>
+            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/LoginController.java</file>
         </group>
     </open-files>
 </project-private>
