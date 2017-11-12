@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="562.0" prefWidth="645.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="645.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
    <children>
       <ImageView fx:id="cover" fitHeight="345.0" fitWidth="264.0" layoutX="367.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
       <JFXTextArea id="field" fx:id="summ" editable="false" focusColor="#dadada" layoutX="26.0" layoutY="150.0" maxWidth="390.0" minWidth="313.0" prefHeight="179.0" prefWidth="330.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css" unFocusColor="#dadada" />

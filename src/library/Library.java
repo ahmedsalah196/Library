@@ -5,6 +5,7 @@
  */
 package library;
 
+import insidefx.undecorator.Undecorator;
 import java.util.ArrayList;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -16,6 +17,9 @@ import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.Stage;
 import javafx.collections.ObservableList;
+import javafx.scene.layout.Region;
+import javafx.scene.paint.Color;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -79,11 +83,16 @@ Book b4 = new Book("Les Miserables","Victor Hugo",mesdes,"5","Fiction","Amr book
   
   
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+ Undecorator undecorator = new Undecorator(stage, (Region) root);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+  stage.initStyle(StageStyle.TRANSPARENT);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
         stage.setResizable(false);
-
     }
 
     /**

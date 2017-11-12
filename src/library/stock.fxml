@@ -17,7 +17,7 @@
    <children>
        
       <Label prefHeight="536.0" prefWidth="793.0" style="-fx-background-color: #2d3447;" text=" " />
-      <JFXTextField id="field" fx:id="input" focusColor="#dadada" labelFloat="true" layoutX="52.0" layoutY="27.0" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." stylesheets="@main.css" unFocusColor="#dadada" />
+      <JFXTextField id="field" fx:id="input" focusColor="#dadada" layoutX="52.0" layoutY="27.0" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." stylesheets="@main.css" unFocusColor="#dadada" />
       <ImageView fitHeight="43.0" fitWidth="53.0" layoutX="345.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@opened-book-with-a-magnifier.png" />
