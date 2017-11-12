@@ -49,7 +49,7 @@ public class LoginController implements Initializable {
     }
     @FXML
     private void handleBorrowerButtonAction(ActionEvent event) {
-       FXMLLoader loader = new FXMLLoader();
+           FXMLLoader loader = new FXMLLoader();
            loader.setLocation(getClass().getResource("UserMenu.fxml"));
          try {
              loader.load();       
@@ -58,12 +58,15 @@ public class LoginController implements Initializable {
           }
          
              UserMenuController d = loader.getController();
-      //System.out.println(loginID.getText());
+
                 d.getUser(loginID.getText());
          Parent root1 = loader.getRoot();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
+              Scene clerkScene = new Scene(root1);
+            String css=Library.class.getResource("UserMenu.fxml").toExternalForm();
+            clerkScene.getStylesheets().add(css);
+            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            clerkStage.setScene(clerkScene);
+            clerkStage.show();
    
     }
     @Override
