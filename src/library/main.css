@@ -25,14 +25,12 @@
     -fx-vertical-gap:10;
     -fx-pref-width:150;
 }
-#loginId{
-    -fx-text-fill: #fff;
-}
-#loginPassword{
-    -fx-text-fill:#dadada;
-}
 .pane{
     -fx-background-color: #333;
+}
+#field{
+    -fx-text-inner-color: #a0a2ab; 
+    -fx-prompt-text-fill: #a0a2ab;
 }
 #background{
     -fx-background-color: #000;

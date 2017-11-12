@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="684.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.SearchController">
+<AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="684.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.SearchController">
    <children>
       <ImageView fitHeight="27.0" fitWidth="36.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,8 +19,8 @@
          </image>
       </ImageView>
       <JFXButton layoutX="632.0" layoutY="27.0" prefHeight="40.0" prefWidth="38.0" text=" " />
-      <JFXTextField layoutX="14.0" layoutY="34.0" maxWidth="657.0" minWidth="605.0" opacity="0.46" prefHeight="33.0" prefWidth="613.0" text="Search Users..." />
+      <JFXTextField id="field" focusColor="#dadada" layoutX="14.0" layoutY="34.0" maxWidth="657.0" minWidth="605.0" opacity="0.46" prefHeight="33.0" prefWidth="613.0" promptText="Search Users..." stylesheets="@main.css" unFocusColor="#dadada" />
       <JFXButton layoutX="-5.0" layoutY="1.0" onAction="#back" prefHeight="27.0" prefWidth="38.0" text=" " />
-      <JFXButton layoutX="305.0" layoutY="375.0" onAction="#book" prefHeight="51.0" prefWidth="90.0" text="View" textFill="#a0a2ab" />
+      <JFXButton layoutX="306.0" layoutY="365.0" onAction="#book" prefHeight="51.0" prefWidth="90.0" text="View" textFill="#a0a2ab" />
    </children>
 </AnchorPane>

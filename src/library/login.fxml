@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="594.0" style="-fx-background-color: #2d3447#333;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="594.0" style="-fx-background-color: #2d3447#333;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.LoginController">
     <children>
       <JFXButton layoutX="113.0" layoutY="398.0" onAction="#handleBorrowerButtonAction" prefHeight="33.0" prefWidth="150.0" ripplerFill="#535252" style="-fx-background-color: #2d3447;" text="Sign in as Borrower" textFill="#a0a2ab">
          <font>
@@ -20,11 +20,11 @@
          <font>
             <Font name="Arial Hebrew Scholar" size="14.0" />
          </font></JFXButton>
-      <JFXTextField id="loginId" fx:id="loginID" focusColor="#dadada" layoutX="190.0" layoutY="253.0" promptText="Username" unFocusColor="#a0a2ab">
+      <JFXTextField id="field" fx:id="loginID" focusColor="#dadada" labelFloat="true" layoutX="196.0" layoutY="253.0" maxWidth="175.0" minWidth="175.0" prefHeight="34.0" prefWidth="175.0" promptText="  Username" stylesheets="@main.css" unFocusColor="#dadada">
          <font>
             <Font size="14.0" />
          </font></JFXTextField>
-      <JFXPasswordField id="loginPassword" fx:id="loginPassword" focusColor="#dadada" layoutX="190.0" layoutY="327.0" promptText="Password" stylesheets="@main.css" unFocusColor="#a0a2ab">
+      <JFXPasswordField id="field" fx:id="loginPassword" focusColor="#dadada" labelFloat="true" layoutX="196.0" layoutY="327.0" maxWidth="175.0" minWidth="175.0" prefHeight="34.0" prefWidth="175.0" promptText="  Password" stylesheets="@main.css" unFocusColor="#dadada">
          <font>
             <Font size="14.0" />
          </font></JFXPasswordField>
@@ -33,12 +33,12 @@
             <Image url="@books.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="167.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="175.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@users.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="39.0" layoutX="167.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="39.0" layoutX="175.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@locked.png" />
          </image>

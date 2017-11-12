@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="595.0" style="-fx-background-color: #2d3347;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.RegUsersController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="595.0" style="-fx-background-color: #2d3347;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.RegUsersController">
    <children>
        <ImageView fitHeight="27.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,14 +16,14 @@
        
        
       <JFXButton layoutX="395.0" layoutY="278.0" onAction="#reg" prefHeight="27.0" prefWidth="150.0" ripplerFill="#06236f" style="-fx-background-color: #00e699;" text="Register New User" textFill="#2d3447" />
-      <JFXTextField fx:id="lname" layoutX="34.0" layoutY="91.0" promptText="Last Name" />
-      <JFXTextField fx:id="bdate" layoutX="34.0" layoutY="139.0" promptText="Birth Date" />
-      <JFXTextField fx:id="email" layoutX="34.0" layoutY="200.0" promptText="Email " />
-      <JFXTextField fx:id="num" layoutX="34.0" layoutY="259.0" promptText="Card Number" />
-      <JFXTextField fx:id="fname" layoutX="34.0" layoutY="45.0" promptText="First Name" />
+      <JFXTextField id="field" fx:id="lname" focusColor="#dadada" labelFloat="true" layoutX="34.0" layoutY="115.0" promptText="Last Name" unFocusColor="#dadada" />
+      <JFXTextField id="field" fx:id="bdate" focusColor="#dadada" labelFloat="true" layoutX="34.0" layoutY="167.0" promptText="Birth Date" unFocusColor="#dadada" />
+      <JFXTextField id="field" fx:id="email" focusColor="#dadada" labelFloat="true" layoutX="34.0" layoutY="223.0" promptText="Email " unFocusColor="#dadada" />
+      <JFXTextField id="field" fx:id="num" focusColor="#dadada" labelFloat="true" layoutX="34.0" layoutY="275.0" promptText="Card Number" stylesheets="@main.css" unFocusColor="#dadada" />
       <ImageView fitHeight="190.0" fitWidth="186.0" layoutX="365.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
            <Image url="@papers.png" />
       </ImageView>
       <JFXButton layoutX="1.0" layoutY="1.0" onAction="#back" prefHeight="25.0" prefWidth="20.0" text=" " />
+      <JFXTextField id="field" fx:id="fname1" focusColor="#dadada" labelFloat="true" layoutX="34.0" layoutY="63.0" promptText="First Name" stylesheets="@main.css" unFocusColor="#dadada" />
    </children>
 </AnchorPane>

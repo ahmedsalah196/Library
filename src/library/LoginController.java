@@ -5,6 +5,7 @@
  */
 package library;
 
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
@@ -31,6 +32,8 @@ import javafx.stage.StageStyle;
 public class LoginController implements Initializable {
     @FXML
     private JFXTextField loginID;
+    @FXML
+    private JFXPasswordField loginPassword;
     @FXML
     private void handleLibrarianButtonAction(ActionEvent event) {
        try {
