@@ -45,23 +45,29 @@ public class LoginController implements Initializable {
     private AnchorPane pane;
     @FXML
     private void handleLibrarianButtonAction(ActionEvent event) {
-       try {
-            Parent root = FXMLLoader.load(getClass().getResource("Library_FXML.fxml"));
+       FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("Library_FXML.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+             //FXMLController d = loader.getController();
              Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-
-            Undecorator undecorator = new Undecorator(stage, (Region) root);
+                //d.getUser(loginID.getText());
+                System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
  
 // Default theme
  undecorator.getStylesheets().add("skin/undecorator.css");
-// stage.initStyle(StageStyle.TRANSPARENT);
- Scene scene = new Scene(undecorator);
- scene.setFill(Color.TRANSPARENT);
-stage.setScene(scene);
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
 stage.show();
-        } catch (IOException ex) {
-            System.out.println(ex.toString());
-        }
-       
+        stage.setResizable(false);
+
     }
     @FXML
     private void handleBorrowerButtonAction(ActionEvent event) {
@@ -76,16 +82,12 @@ stage.show();
              UserMenuController d = loader.getController();
              Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
                 d.getUser(loginID.getText());
-         Parent root1 = loader.getRoot();
-              
-            Stage stage1=(Stage)((Node)event.getSource()).getScene().getWindow();
-            
+         Parent root1 = loader.getRoot();            
             Undecorator undecorator = new Undecorator(stage, (Region) root1);
  
 // Default theme
  undecorator.getStylesheets().add("skin/undecorator.css");
  Scene scene1 = new Scene(undecorator);
-//  stage.initStyle(StageStyle.TRANSPARENT);
  scene1.setFill(Color.TRANSPARENT);
 stage.setScene(scene1);
 stage.show();
@@ -94,8 +96,6 @@ stage.show();
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        pane.autosize();
-        main.autosize();
     }    
     
 }

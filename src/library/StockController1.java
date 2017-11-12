@@ -6,6 +6,7 @@
 package library;
 
 import com.jfoenix.controls.JFXTextField;
+import insidefx.undecorator.Undecorator;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -27,8 +28,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
    
@@ -48,20 +52,31 @@ public class StockController1 implements Initializable {
         isbn.setCellValueFactory(cellData -> cellData.getValue().getISBN());
        fill();
        result.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+                        Stage stage=new Stage();
            FXMLLoader loader = new FXMLLoader();
            loader.setLocation(getClass().getResource("BookView.fxml"));
-            try {
+         try {
              loader.load();       
         } catch(Exception e) {
            e.printStackTrace();
-        }
-            BookViewController d = loader.getController();
-            System.out.println(newSelection.getISBN().getValue());
+          }
+         
+             BookViewController d = loader.getController();
                 d.getBook(newSelection.getISBN().getValue());
-                Parent root1 = loader.getRoot();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();  
+         stage.initStyle(StageStyle.TRANSPARENT);
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
+        stage.setResizable(false);
+
+       
 });
     }   
     private void fill(){
@@ -98,29 +113,47 @@ public class StockController1 implements Initializable {
           }
          
              BookViewController d = loader.getController();
-      System.out.println(bookISBN.getText());
+             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
                 d.getBook(bookISBN.getText());
-         Parent root1 = loader.getRoot();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));  
-                stage.show();
-   
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
+        stage.setResizable(false);
+
        
     }
      @FXML
     private void back(ActionEvent event){
-        try {
-            Parent clerkRoot = FXMLLoader.load(getClass().getResource("Library_FXML.fxml"));
-            
-            Scene clerkScene = new Scene(clerkRoot);
-            String css=Library.class.getResource("main.css").toExternalForm();
-            clerkScene.getStylesheets().add(css);
-            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
-            clerkStage.setScene(clerkScene);
-            clerkStage.show();
-        } catch (IOException ex) {
-            System.out.println(ex.toString());
-        }
+        FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("Library_FXML.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+             //FXMLController d = loader.getController();
+             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+                //d.getUser(loginID.getText());
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
+        stage.setResizable(false);
+
     }
     
 }

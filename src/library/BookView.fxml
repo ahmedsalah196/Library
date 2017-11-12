@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="645.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="645.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BookViewController">
    <children>
-      <ImageView fx:id="cover" fitHeight="345.0" fitWidth="264.0" layoutX="367.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXTextArea id="field" fx:id="summ" editable="false" focusColor="#dadada" layoutX="26.0" layoutY="150.0" maxWidth="390.0" minWidth="313.0" prefHeight="179.0" prefWidth="330.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css" unFocusColor="#dadada" />
-      <VBox layoutX="55.0" layoutY="413.0" prefHeight="99.0" prefWidth="223.0">
+      <ImageView fx:id="cover" fitHeight="345.0" fitWidth="264.0" layoutX="367.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTextArea id="field" fx:id="summ" editable="false" focusColor="#dadada" layoutX="26.0" layoutY="169.0" maxWidth="390.0" minWidth="313.0" prefHeight="179.0" prefWidth="330.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css" unFocusColor="#dadada" />
+      <VBox layoutX="55.0" layoutY="432.0" prefHeight="99.0" prefWidth="223.0">
          <children>
             <HBox prefHeight="112.0" prefWidth="100.0">
                <children>
@@ -37,7 +39,7 @@
             </VBox>
          </children>
       </VBox>
-      <VBox layoutX="397.0" layoutY="402.0" prefHeight="99.0" prefWidth="223.0">
+      <VBox layoutX="397.0" layoutY="432.0" prefHeight="99.0" prefWidth="223.0">
          <children>
             <HBox prefHeight="112.0" prefWidth="100.0">
                <children>
@@ -63,5 +65,11 @@
             </VBox>
          </children>
       </VBox>
+      <ImageView fitHeight="27.0" fitWidth="51.0" layoutX="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@return-button.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="44.0" layoutY="1.0" onAction="#back" prefHeight="27.0" prefWidth="27.0" text=" " />
    </children>
 </AnchorPane>

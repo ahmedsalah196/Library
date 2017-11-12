@@ -2,6 +2,7 @@
 package library;
 
 import com.jfoenix.controls.JFXTextArea;
+import insidefx.undecorator.Undecorator;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,6 +21,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -88,19 +91,29 @@ Label pub;
     }
     @FXML
     private void back(ActionEvent event){
-        try {
-            Parent clerkRoot = FXMLLoader.load(getClass().getResource("stock.fxml"));
-            
-            Scene clerkScene = new Scene(clerkRoot);
-            String css=Library.class.getResource("main.css").toExternalForm();
-            clerkScene.getStylesheets().add(css);
-            Stage clerkStage=(Stage)((Node)event.getSource()).getScene().getWindow();
-            clerkStage.setScene(clerkScene);
-            clerkStage.show();
-        } catch (IOException ex) {
+        FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("stock.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
          
-            System.out.println(ex.toString());
-        }
+             //FXMLController d = loader.getController();
+             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+                //d.getUser(loginID.getText());
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
+        stage.setResizable(false);
+
     }
     
    
