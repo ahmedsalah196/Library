@@ -10,7 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="705.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BorrowerList_FXMLController">
+<AnchorPane id="AnchorPane" fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="705.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.BorrowerList_FXMLController">
    <children>
       <ImageView fitHeight="27.0" fitWidth="51.0" layoutX="53.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,17 +27,15 @@
             <TableColumn fx:id="returned" prefWidth="64.0" text="Returned" />
         </columns>
       </TableView>
-      <Label layoutX="62.0" layoutY="337.0" text="First Name" textFill="#a0a2ab" />
-      <Label layoutX="61.0" layoutY="373.0" text="Last Name" textFill="#a0a2ab" />
-      <Label layoutX="62.0" layoutY="409.0" text="Borrowed Book" textFill="#a0a2ab" />
+      <Label layoutX="62.0" layoutY="337.0" text="UserName" textFill="#a0a2ab" />
+      <Label layoutX="61.0" layoutY="373.0" prefHeight="17.0" prefWidth="64.0" text="BookISBN" textFill="#a0a2ab" />
+      <Label layoutX="62.0" layoutY="409.0" text="BookName" textFill="#a0a2ab" />
       <Label layoutX="62.0" layoutY="447.0" text="Return Date" textFill="#a0a2ab" />
-      <Label layoutX="62.0" layoutY="480.0" text="Email" textFill="#a0a2ab" />
-      <TextField fx:id="fnamefield" layoutX="162.0" layoutY="333.0" />
-      <TextField fx:id="lnamefield" layoutX="162.0" layoutY="369.0" />
-      <TextField fx:id="bookfield" layoutX="162.0" layoutY="405.0" />
-      <TextField fx:id="datefield" layoutX="162.0" layoutY="442.0" />
-      <TextField fx:id="emailfield" layoutX="162.0" layoutY="476.0" />
-      <Button fx:id="submit" layoutX="390.0" layoutY="400.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #00e699;" text="Submit" textFill="#2d3347" />
+      <TextField fx:id="username" layoutX="162.0" layoutY="333.0" />
+      <TextField fx:id="isbn" layoutX="162.0" layoutY="369.0" />
+      <TextField fx:id="bookname" layoutX="162.0" layoutY="405.0" />
+      <TextField fx:id="rdate" layoutX="162.0" layoutY="442.0" />
+      <Button fx:id="borrow" layoutX="390.0" layoutY="400.0" mnemonicParsing="false" onAction="#borrowBook" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #00e699;" text="Borrow" textFill="#2d3347" />
       <JFXButton layoutX="56.0" layoutY="-3.0" onAction="#back" opacity="0.0" prefHeight="35.0" prefWidth="27.0" text=" " />
    </children>
 </AnchorPane>
