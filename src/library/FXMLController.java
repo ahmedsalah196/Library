@@ -65,10 +65,25 @@ stage.show();
      
      @FXML
       private void handleListButtonAction(ActionEvent event) {
+<<<<<<< HEAD
+
+//<<<<<<< HEAD
+//
+//
+//=======
+//>>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
+ try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
+                Parent root1 = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root1));  
+                stage.show();
+=======
 FXMLLoader loader = new FXMLLoader();
            loader.setLocation(getClass().getResource("BorrowerList_FXML.fxml"));
          try {
              loader.load();       
+>>>>>>> 949d5a87320c92bd7362f2e61b008bb31d63f844
         } catch(Exception e) {
            e.printStackTrace();
           }
@@ -116,7 +131,16 @@ stage.setScene(scene1);
 stage.show();
         stage.setResizable(false);
 
+<<<<<<< HEAD
+//<<<<<<< HEAD
+//    
+//=======
+//>>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
+=======
     }
+>>>>>>> 949d5a87320c92bd7362f2e61b008bb31d63f844
 
          @FXML
        private void bookbutton(ActionEvent event) {
