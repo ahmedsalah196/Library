@@ -32,6 +32,7 @@ import javafx.stage.StageStyle;
  * @author Farida Abouish
  */
 public class HistoryController implements Initializable {
+    
  @FXML
     private TableView<info> result;
     @FXML
@@ -42,6 +43,7 @@ public class HistoryController implements Initializable {
     private TableColumn<info, String> isbn,title,genre;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         title.setCellValueFactory(cellData -> cellData.getValue().getTitle());
         genre.setCellValueFactory(cellData -> cellData.getValue().getGenre());
         isbn.setCellValueFactory(cellData -> cellData.getValue().getISBN());
