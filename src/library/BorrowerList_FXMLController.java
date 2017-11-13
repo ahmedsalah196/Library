@@ -5,6 +5,7 @@
  */
 package library;
 
+import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
 import insidefx.undecorator.Undecorator;
 import java.io.IOException;
@@ -20,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -40,10 +42,14 @@ public class BorrowerList_FXMLController implements Initializable {
   
   @FXML
     private TextField rdate;
+  @FXML
+  private AnchorPane rootpane;
+  
  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+       
         
     }    
      @FXML
@@ -76,7 +82,7 @@ stage.show();
     
     @FXML
        private void borrowBook(ActionEvent event) {
-         
+          JFXSnackbar snack = new JFXSnackbar(rootpane);
            Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg");
            Book b = new Book("Not available","Not available","Not available","Not available","Not available","Not available","na.jpg");
          for(Book in:Library.bookList){
@@ -97,19 +103,32 @@ stage.show();
             }
         }
            
-           if(a.firstName!="Not available"&&b.Author!="Not available"&&b.available==true){
-               Library.borrowList.add(new borrowItem(a.Username,b.ISBN,b.Title));
+           if(a.firstName=="Not available"){
+               
+               snack.show("Not a vaild User",3000);
+               
+           }
+           
+           else if(b.Author=="Not available")
+           {
+                 snack.show("Not a vaild Book",3000);
+           }
+             
+           else if(b.available==false){
+                snack.show("Book is reserved",3000);
+           }
+           
+           else{
+                 Library.borrowList.add(new borrowItem(a.Username,b.ISBN,b.Title));
                a.borrowHistory.add(b);
                b.available = false;
                for(Book in: a.borrowHistory){
                      System.out.println(in.Author);
                }
-             
+           }
                
-           }
-           else{
-                System.out.println("Fail");
-           }
+           
+          
            
        }
     
