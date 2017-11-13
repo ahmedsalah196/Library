@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="427.0" prefWidth="631.0" style="-fx-background-color: #2d3447;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="library.BorProfileController">
+   <children>
+      <Label layoutX="336.0" layoutY="76.0" prefHeight="44.0" prefWidth="202.0" text="Label" />
+      <ImageView fitHeight="131.0" fitWidth="133.0" layoutX="35.0" layoutY="32.0">
+         <image>
+            <Image url="@girl.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="336.0" layoutY="304.0" prefHeight="44.0" prefWidth="202.0" text="Label" />
+      <Label layoutX="336.0" layoutY="260.0" prefHeight="44.0" prefWidth="202.0" text="Label" />
+      <Label layoutX="336.0" layoutY="216.0" prefHeight="44.0" prefWidth="202.0" text="Label" />
+      <Label layoutX="336.0" layoutY="172.0" prefHeight="44.0" prefWidth="202.0" text="Label" />
+      <Label layoutX="336.0" layoutY="128.0" prefHeight="44.0" prefWidth="202.0" text="Label" />
+      <Label layoutX="235.0" layoutY="87.0" prefHeight="90.0" prefWidth="107.0" text="Label" />
+      <HBox layoutX="236.0" layoutY="48.0" prefHeight="100.0" prefWidth="200.0" />
+      <AnchorPane id="AnchorPane" fx:id="pane" layoutX="10.0" layoutY="10.0" prefHeight="427.0" prefWidth="631.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css">
+         <children>
+            <ImageView fx:id="img" fitHeight="143.0" fitWidth="133.0" layoutX="66.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@boy.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="227.0" layoutY="138.0" prefHeight="243.0" prefWidth="292.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="292.0">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="186.0" text="First Name" textFill="#4e9e83" />
+                        <Label fx:id="fname" prefHeight="48.0" prefWidth="283.0" text="John" textFill="#c22d9f" />
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="203.0" prefWidth="292.0">
+                     <children>
+                        <HBox prefHeight="44.0" prefWidth="292.0">
+                           <children>
+                              <Label prefHeight="44.0" prefWidth="103.0" text="Last Name" textFill="#4e9e83" />
+                              <Label fx:id="lname" prefHeight="44.0" prefWidth="201.0" text="Doe" textFill="#c22d9f" />
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="143.0" prefWidth="292.0">
+                           <children>
+                              <HBox prefHeight="40.0" prefWidth="292.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="113.0" text="Gender" textFill="#4e9e83" />
+                                    <Label fx:id="gender" prefHeight="43.0" prefWidth="212.0" text="Male" textFill="#c22d9f" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="43.0" prefWidth="292.0">
+                                 <children>
+                                    <Label prefHeight="59.0" prefWidth="99.0" text="Date of birth" textFill="#4e9e83" />
+                                    <Label fx:id="dbirth" prefHeight="57.0" prefWidth="200.0" text="14/6/1991" textFill="#c22d9f" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="38.0" prefWidth="292.0">
+                                 <children>
+                                    <Label prefHeight="38.0" prefWidth="105.0" text="ID Number" textFill="#4e9e83" />
+                                    <Label fx:id="dexpire" prefHeight="54.0" prefWidth="206.0" text="234789020110" textFill="#c22d9f" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox layoutX="227.0" layoutY="98.0" prefHeight="44.0" prefWidth="292.0">
+               <children>
+                  <Label prefHeight="90.0" prefWidth="107.0" stylesheets="@main.css" text="Username" textFill="#4e9e83" />
+                  <Label fx:id="uname" prefHeight="44.0" prefWidth="202.0" text="John_Doe91" textFill="#c22d9f" />
+               </children>
+            </HBox>
+            <JFXButton layoutX="4.0" layoutY="6.0" onAction="#Borrback" prefHeight="69.0" prefWidth="79.0" text=" " />
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="23.0" layoutY="14.0">
+               <image>
+                  <Image url="@return-button.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
