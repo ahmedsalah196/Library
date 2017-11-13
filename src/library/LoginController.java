@@ -76,7 +76,6 @@ public class LoginController implements Initializable {
 
     @FXML
     private void handleBorrowerButtonAction(ActionEvent event) {
-<<<<<<< HEAD
         JFXSnackbar snack = new JFXSnackbar(pane);
         FXMLLoader loader = new FXMLLoader();
        
@@ -116,8 +115,7 @@ public class LoginController implements Initializable {
         Parent root1 = loader.getRoot();
         Undecorator undecorator = new Undecorator(stage, (Region) root1);
 
-=======
-           FXMLLoader loader = new FXMLLoader();
+
            loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
          try {
              loader.load();       
@@ -125,23 +123,16 @@ public class LoginController implements Initializable {
            e.printStackTrace();
           }
          
-<<<<<<< HEAD
-=======
 
             // BorrowerInterface_FXMLController d = loader.getController();
+           
+
 
           // BorrowerInterface_FXMLController d = loader.getController();
->>>>>>> 5adca80ed891aaa59e2bc56156c0ad3f245e750e
 
-
-            BorrowerInterface_FXMLController d = loader.getController();
-
-             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-                d.getUser(loginID.getText());
-         Parent root1 = loader.getRoot();            
-            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+           
  
->>>>>>> 1fb975dd7a53fa7b3ef8afb421ed393744039d11
+
 // Default theme
         undecorator.getStylesheets().add("skin/undecorator.css");
         Scene scene1 = new Scene(undecorator);
