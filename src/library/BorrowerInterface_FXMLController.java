@@ -148,7 +148,7 @@ stage.show();
             }
         }
         
-         System.out.println(a.Username);
+         System.out.println("hi");
      
         for(Borrower in:Library.users){
           System.out.println(in.Username);
