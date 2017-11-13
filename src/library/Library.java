@@ -29,6 +29,7 @@ public class Library extends Application {
     
      public static ArrayList<Book> bookList = new ArrayList<Book>();
      public static ArrayList<Borrower> users = new ArrayList<Borrower>();
+     public static ArrayList<borrowItem> borrowList = new ArrayList<borrowItem>();
      public ObservableList<info> search(String str){
       str.toLowerCase();
      ObservableList<info> searched= FXCollections.observableArrayList();
