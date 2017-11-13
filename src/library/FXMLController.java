@@ -51,11 +51,11 @@ public class FXMLController implements Initializable {
      @FXML
       private void handleListButtonAction(ActionEvent event) {
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
+//<<<<<<< HEAD
+//
+//
+//=======
+//>>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
  try {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BorrowerList_FXML.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
@@ -72,10 +72,10 @@ public class FXMLController implements Initializable {
        private void handleStockButtonAction(ActionEvent event) {
          try {
 
-<<<<<<< HEAD
-    
-=======
->>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
+//<<<<<<< HEAD
+//    
+//=======
+//>>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Stockato.fxml"));
 
