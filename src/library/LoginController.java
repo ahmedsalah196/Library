@@ -115,8 +115,23 @@ public class LoginController implements Initializable {
         Parent root1 = loader.getRoot();
         Undecorator undecorator = new Undecorator(stage, (Region) root1);
 
+
+           loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+
             // BorrowerInterface_FXMLController d = loader.getController();
            
+
+
+          // BorrowerInterface_FXMLController d = loader.getController();
+
+           
+ 
 
 // Default theme
         undecorator.getStylesheets().add("skin/undecorator.css");

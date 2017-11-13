@@ -178,7 +178,6 @@ stage.show();
 //        }
 //    }
        
-       
 
     
     @Override
