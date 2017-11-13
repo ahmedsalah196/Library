@@ -18,8 +18,7 @@ import javafx.beans.property.StringProperty;
  * @author Amr Ayman
  */
 class info {
-
-
+    
     private final StringProperty ISBN;
     private final StringProperty Title;
     private final StringProperty Genre;
