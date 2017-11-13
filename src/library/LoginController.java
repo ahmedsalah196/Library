@@ -79,7 +79,11 @@ stage.show();
            e.printStackTrace();
           }
          
+
+            // BorrowerInterface_FXMLController d = loader.getController();
+
           // BorrowerInterface_FXMLController d = loader.getController();
+
 
             BorrowerInterface_FXMLController d = loader.getController();
 
