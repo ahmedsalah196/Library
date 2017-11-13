@@ -2,6 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Library.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/StockController1.java</file>
+=======
             <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BorrowerList_FXMLController.java</file>
             <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/Library.java</file>
             <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BorProfileController.java</file>
@@ -43,6 +47,7 @@
 >>>>>>> 949d5a87320c92bd7362f2e61b008bb31d63f844
 >>>>>>> 2acce74afcffb0bf6ae92a5ad8774fd6b1dd6c2b
 >>>>>>> 65531f0dab472e46818911b7f63fa3ddab8364e0
+>>>>>>> 202a40da345c74285e8a7d24510f7bf1ecff8d1e
         </group>
     </open-files>
 </project-private>

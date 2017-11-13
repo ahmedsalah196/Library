@@ -79,10 +79,11 @@ stage.show();
            e.printStackTrace();
           }
          
+
             BorrowerInterface_FXMLController d = loader.getController();
 
              Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-                //d.getUser(loginID.getText());
+                d.getUser(loginID.getText());
          Parent root1 = loader.getRoot();            
             Undecorator undecorator = new Undecorator(stage, (Region) root1);
  
