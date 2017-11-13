@@ -17,24 +17,22 @@
             <Image url="@return-button.png" />
          </image>
       </ImageView>
-      <TableView layoutX="5.0" layoutY="29.0" prefHeight="289.0" prefWidth="690.0">
+      <TableView fx:id="result" layoutX="5.0" layoutY="29.0" prefHeight="289.0" prefWidth="690.0">
         <columns>
-          <TableColumn fx:id="fname" prefWidth="92.0" text="First Name" />
-          <TableColumn fx:id="lname" prefWidth="97.0" text="Last Name" />
-            <TableColumn fx:id="email" prefWidth="126.0" text="Email" />
-            <TableColumn fx:id="book" prefWidth="169.0" text="Borrowed Book" />
-            <TableColumn fx:id="date" prefWidth="136.0" text="Return Date" />
-            <TableColumn fx:id="returned" prefWidth="64.0" text="Returned" />
+          <TableColumn fx:id="userfiled" prefWidth="92.0" text="UserName" />
+          <TableColumn fx:id="isbnfield" prefWidth="167.0" text="ISBN" />
+            <TableColumn fx:id="borrowfield" prefWidth="142.0" text="BorrowDate" />
+            <TableColumn fx:id="returnfield" prefWidth="242.0" text=" Return Date" />
         </columns>
       </TableView>
       <Label layoutX="62.0" layoutY="337.0" text="UserName" textFill="#a0a2ab" />
       <Label layoutX="61.0" layoutY="373.0" prefHeight="17.0" prefWidth="64.0" text="BookISBN" textFill="#a0a2ab" />
       <Label layoutX="62.0" layoutY="409.0" text="BookName" textFill="#a0a2ab" />
-      <Label layoutX="62.0" layoutY="447.0" text="Return Date" textFill="#a0a2ab" />
+      <Label layoutX="62.0" layoutY="447.0" text="Borrow Time" textFill="#a0a2ab" />
       <TextField fx:id="username" layoutX="162.0" layoutY="333.0" />
       <TextField fx:id="isbn" layoutX="162.0" layoutY="369.0" />
       <TextField fx:id="bookname" layoutX="162.0" layoutY="405.0" />
-      <TextField fx:id="rdate" layoutX="162.0" layoutY="442.0" />
+      <TextField fx:id="time" layoutX="162.0" layoutY="442.0" />
       <Button fx:id="borrow" layoutX="390.0" layoutY="400.0" mnemonicParsing="false" onAction="#borrowBook" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #00e699;" text="Borrow" textFill="#2d3347" />
       <JFXButton layoutX="56.0" layoutY="-3.0" onAction="#back" opacity="0.0" prefHeight="35.0" prefWidth="27.0" text=" " />
    </children>
