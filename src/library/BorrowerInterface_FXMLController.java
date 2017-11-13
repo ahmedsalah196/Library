@@ -134,9 +134,7 @@ stage.setScene(scene1);
 stage.show();
         stage.setResizable(false);
        }
-<<<<<<< HEAD
-=======
-       
+
        
           
     public void getUser(String id){
@@ -158,7 +156,7 @@ stage.show();
     }
        
        
->>>>>>> 65531f0dab472e46818911b7f63fa3ddab8364e0
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
