@@ -2,16 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/Library.java</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/Book.java</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/main.css</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/UserMenu.fxml</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/LoginController.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Library.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/StockController1.java</file>
         </group>
->>>>>>> 603ad5e9b88d8fb7177e2e3b5f307c418a25dd61
     </open-files>
 </project-private>
