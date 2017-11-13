@@ -52,6 +52,24 @@ public class Library extends Application {
      }
      @Override
     public void start(Stage stage) throws Exception {
+<<<<<<< HEAD
+        
+      
+//<<<<<<< HEAD
+//       
+//
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+//=======
+//
+//       Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+//
+//>>>>>>> 05201139599c27dfc43b0726e2c30921ab1434ed
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+=======
                 String des = "One of the most celebrated and popular historical romances ever written. The Three Musketeers tell the story of the early adventures of the young Gascon gentleman d'Artagnan and his three friends from the regiment of the King's Musketeers: Athos, Porthos, and Aramis.\n" +
 "\n" +
 "Under the watchful eye of their patron M. de Treville, the four defend the honour of the regiment against the guards of the Cardinal Richelieu and the honor of the queen against the machinations of the Cardinal himself as the power struggles of 17th-century France are vividly played out in the background.\n" +
@@ -92,6 +110,7 @@ Book b4 = new Book("Les Miserables","Victor Hugo",mesdes,"5","Fiction","Amr book
  scene1.setFill(Color.TRANSPARENT);
 stage.setScene(scene1);
 stage.show();
+>>>>>>> 949d5a87320c92bd7362f2e61b008bb31d63f844
         stage.setResizable(false);
     }
 
