@@ -8,19 +8,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="828.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.HistoryController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="828.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.HistoryController">
 
    <children>
-      <TableView fx:id="result" layoutX="54.0" layoutY="80.0" prefHeight="196.0" prefWidth="748.0">
+      <TableView fx:id="history" layoutX="54.0" layoutY="80.0" prefHeight="196.0" prefWidth="748.0">
          <columns>
             <TableColumn fx:id="isbn" prefWidth="85.0" text="ISBN" />
             <TableColumn fx:id="genre" prefWidth="127.0" text="Genre" />
             <TableColumn fx:id="title" prefWidth="534.0" text="Title" />
          </columns>
       </TableView>
-      <TableView fx:id="result1" layoutX="54.0" layoutY="397.0" prefHeight="196.0" prefWidth="748.0">
+      <TableView fx:id="recommendations" layoutX="54.0" layoutY="397.0" prefHeight="196.0" prefWidth="748.0">
          <columns>
             <TableColumn fx:id="isbn1" prefWidth="85.0" text="ISBN" />
             <TableColumn fx:id="title1" prefWidth="534.0" text="Title" />

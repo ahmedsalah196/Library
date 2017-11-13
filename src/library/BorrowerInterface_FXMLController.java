@@ -137,28 +137,30 @@ stage.show();
 
 
           
-       public void getUser(Borrower d) {
-           a = d;
-       }
+//       public void getUser(Borrower d) {
+//           a = d;
+//       }
        
           
-//    public void getUsername(String id) {
-//
-//        for (Borrower in : Library.users) {
-//            //System.out.println(id);
-//            if (in.Username.equalsIgnoreCase(id)) {
-//                 a = in;
-//               
-//                break;
-//            }
-//        }
-//
-//        System.out.println("hi");
-//     
-//        for(Borrower in:Library.users){
-//          System.out.println(in.Username);
-//        }
-//    }
+    public Borrower getUser(String id) {
+
+        for (Borrower in : Library.users) {
+            //System.out.println(id);
+            if (in.Username.equalsIgnoreCase(id)) {
+                 a = in;
+               
+                break;
+            }
+           
+        }
+
+        System.out.println("hi");
+     
+        for(Borrower in:Library.users){
+          System.out.println(in.Username);
+        }
+         return a;
+    }
     
 //    public void getPassword(String ps)
 //    {
