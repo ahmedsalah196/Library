@@ -134,6 +134,28 @@ stage.setScene(scene1);
 stage.show();
         stage.setResizable(false);
        }
+       
+       
+          
+    public void getUser(String id){
+        Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg");
+        for(Borrower in:Library.users){
+            //System.out.println(id);
+            if(in.Username.equalsIgnoreCase(id)){
+               a = in;
+              
+               break;
+            }
+        }
+        
+         System.out.println(a.Username);
+     
+        for(Borrower in:Library.users){
+          System.out.println(in.Username);
+        }
+    }
+       
+       
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
