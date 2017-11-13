@@ -8,12 +8,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<<<<<<< HEAD
 
-<AnchorPane id="AnchorPane" style="-fx-background-color: #2d3447;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="library.HistoryController">
-=======
+
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="828.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.HistoryController">
->>>>>>> 65531f0dab472e46818911b7f63fa3ddab8364e0
+
    <children>
       <TableView fx:id="result" layoutX="54.0" layoutY="80.0" prefHeight="196.0" prefWidth="748.0">
          <columns>
