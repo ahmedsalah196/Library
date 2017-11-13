@@ -5,10 +5,7 @@
  */
 package library;
 
-import com.jfoenix.controls.JFXTextArea;
-import com.jfoenix.controls.JFXTextField;
 import insidefx.undecorator.Undecorator;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -25,58 +22,14 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author Amr Ayman
+ * @author Farida Abouish
  */
+public class BorProfileController implements Initializable {
 
-
-public class RegUsersController implements Initializable {
    @FXML
-    private JFXTextField lname;
-
-    @FXML
-    private JFXTextField bdate;
-
-    @FXML
-    private JFXTextField email;
-
-    @FXML
-    private JFXTextField num;
-
-    @FXML
-    private JFXTextField fname1;
-
-    @FXML
-    private JFXTextField user;
-
-    @FXML
-    private JFXTextField pass;
-
-
-    /**
-     * Initializes the controller class.
-     */
-    
-   ;
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-       
-    }    
-    
-     @FXML
-
-    private void reg(ActionEvent event){
-       Library.users.add(new Borrower(fname1.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),user.getText(),pass.getText()));
-       for(int i = 0 ; i <Library.users.size();i++){
-           System.out.print(Library.users.get(i).firstName);
-       }
-    }
-    
-      @FXML
-    private void back(ActionEvent event){
+    private void Borrback(ActionEvent event){
         FXMLLoader loader = new FXMLLoader();
-           loader.setLocation(getClass().getResource("Library_FXML.fxml"));
+           loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
          try {
              loader.load();       
         } catch(Exception e) {
@@ -99,5 +52,9 @@ stage.show();
         stage.setResizable(false);
 
     }
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
     
 }

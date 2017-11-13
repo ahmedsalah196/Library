@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2d3447;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="library.BorStockController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="780.0" style="-fx-background-color: #2d3447;" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@main.css" />
+         </stylesheets>
+         <children>
+            <JFXTextField id="field" fx:id="input" focusColor="#dadada" layoutX="52.0" layoutY="43.0" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#searchBook" prefHeight="31.0" prefWidth="336.0" promptText="Search..." stylesheets="@main.css" unFocusColor="#dadada" />
+            <ImageView fitHeight="43.0" fitWidth="53.0" layoutX="345.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@opened-book-with-a-magnifier.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="345.0" layoutY="38.0" onAction="#searchBook" prefHeight="31.0" prefWidth="43.0" text=" " />
+            <TableView fx:id="result" layoutX="15.0" layoutY="90.0" prefHeight="411.0" prefWidth="748.0">
+               <columns>
+                  <TableColumn fx:id="isbn" prefWidth="85.0" text="ISBN" />
+                  <TableColumn fx:id="title" prefWidth="534.0" text="Title" />
+                  <TableColumn fx:id="genre" prefWidth="127.0" text="Genre" />
+               </columns>
+            </TableView>
+            <JFXButton layoutX="658.0" layoutY="40.0" onAction="#openBook" text="Open Book" textFill="#dadada" />
+            <JFXTextField id="field" fx:id="bookISBN" focusColor="#dadada" labelFloat="true" layoutX="491.0" layoutY="37.0" promptText="ISBN" stylesheets="@main.css" unFocusColor="#dadada" />
+            <ImageView fitHeight="27.0" fitWidth="51.0" layoutX="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@return-button.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="48.0" onAction="#back" prefHeight="25.0" prefWidth="27.0" text=" " />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
