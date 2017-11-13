@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  */
 public class BorrowerInterface_FXMLController implements Initializable {
 
-    
+     Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg");
     
     @FXML
        private void handleStockButtonAction(ActionEvent event) {
@@ -138,7 +138,7 @@ stage.show();
        
           
     public void getUser(String id){
-        Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg");
+       
         for(Borrower in:Library.users){
             //System.out.println(id);
             if(in.Username.equalsIgnoreCase(id)){
