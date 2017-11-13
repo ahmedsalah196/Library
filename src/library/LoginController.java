@@ -79,11 +79,8 @@ stage.show();
            e.printStackTrace();
           }
          
-<<<<<<< HEAD
-            // BorrowerInterface_FXMLController d = loader.getController();
-=======
             BorrowerInterface_FXMLController d = loader.getController();
->>>>>>> 65531f0dab472e46818911b7f63fa3ddab8364e0
+
              Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
                 //d.getUser(loginID.getText());
          Parent root1 = loader.getRoot();            
