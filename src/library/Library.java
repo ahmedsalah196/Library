@@ -78,9 +78,9 @@ Book b1 = new Book("Harry Potter and The Prisoner of Askabaan","JK Rowling",hpde
 Book b2 = new Book("Treasure Island","Robert Louis Stevenson",tresdes,"3","Fiction","Amr books","tres.jpg");
 Book b3 = new Book("seven habits of highly effective people"," Stephen R. Covey",sevdes,"4","Education","Mamdouh books","seven.jpg");
 Book b4 = new Book("Les Miserables","Victor Hugo",mesdes,"5","Fiction","Amr books","lesmes_.jpg");
-  Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr");
-  Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay");
-  Borrower a3 = new Borrower("Amr","ExtremleyAyman","","a","3","salah");
+  Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr","123");
+  Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay","456");
+  Borrower a3 = new Borrower("Amr","ExtremleyAyman","","a","3","salah","789");
   
   users.add(a1);
   users.add(a2);

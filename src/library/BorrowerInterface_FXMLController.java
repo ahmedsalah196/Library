@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  */
 public class BorrowerInterface_FXMLController implements Initializable {
 
-     Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg");
+     Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg","Not available");
     
     @FXML
        private void handleStockButtonAction(ActionEvent event) {
@@ -135,25 +135,48 @@ stage.show();
         stage.setResizable(false);
        }
 
+
+          
+       public void getUser(Borrower d) {
+           a = d;
+       }
        
           
-    public void getUser(String id){
-       
-        for(Borrower in:Library.users){
-            //System.out.println(id);
-            if(in.Username.equalsIgnoreCase(id)){
-               a = in;
-              
-               break;
-            }
-        }
-        
-         System.out.println("hi");
-     
-        for(Borrower in:Library.users){
-          System.out.println(in.Username);
-        }
-    }
+//    public void getUsername(String id) {
+//
+//        for (Borrower in : Library.users) {
+//            //System.out.println(id);
+//            if (in.Username.equalsIgnoreCase(id)) {
+//                 a = in;
+//               
+//                break;
+//            }
+//        }
+//
+//        System.out.println("hi");
+//     
+//        for(Borrower in:Library.users){
+//          System.out.println(in.Username);
+//        }
+//    }
+    
+//    public void getPassword(String ps)
+//    {
+//         for(Borrower in:Library.users){
+//            //System.out.println(id);
+//            if(in.password.equalsIgnoreCase(ps)){
+//               a = in;
+//              
+//               break;
+//            }
+//        }
+//        
+//         System.out.println("hi");
+//     
+//        for(Borrower in:Library.users){
+//          System.out.println(in.password);
+//        }
+//    }
        
        
 
