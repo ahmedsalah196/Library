@@ -78,7 +78,7 @@ public class LoginController implements Initializable {
     private void handleBorrowerButtonAction(ActionEvent event) {
         JFXSnackbar snack = new JFXSnackbar(pane);
         FXMLLoader loader = new FXMLLoader();
-       
+       Borrower in = null;
 
         // BorrowerInterface_FXMLController d = loader.getController();
         BorrowerInterface_FXMLController d = loader.getController();
@@ -89,13 +89,15 @@ public class LoginController implements Initializable {
             if (loginID.getText().equalsIgnoreCase(Library.users.get(i).Username)) {
                 if (loginPassword.getText().equals(Library.users.get(i).password)) {
                     
+                  //  d.getUser(Library.users.get(i).Username);
+                  
                     loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
                     try {
                         loader.load();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    //d.getUser(Library.users.get(i));
+                    in = Library.users.get(i);
 
                 } else {
                     System.out.println("NOO");
@@ -109,29 +111,15 @@ public class LoginController implements Initializable {
                snack.show("Invalid Username",3000);
             }
         }
+        System.out.println(in.firstName);
 
-        // d.getUsername(loginID.getText());
+        // d.getUser(loginID.getText());
         //d.getPassword(passID.getText());
         Parent root1 = loader.getRoot();
         Undecorator undecorator = new Undecorator(stage, (Region) root1);
 
 
-           loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
-         try {
-             loader.load();       
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-         
-
-            // BorrowerInterface_FXMLController d = loader.getController();
-           
-
-
           // BorrowerInterface_FXMLController d = loader.getController();
-
-           
- 
 
 // Default theme
         undecorator.getStylesheets().add("skin/undecorator.css");
