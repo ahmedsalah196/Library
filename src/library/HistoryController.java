@@ -32,8 +32,10 @@ import javafx.stage.StageStyle;
  * @author Farida Abouish
  */
 public class HistoryController implements Initializable {
+    //LoginController lc = new LoginController ();
+    
  @FXML
-    private TableView<info> result;
+    private TableView<info> history;
     @FXML
     private JFXTextField input;
     @FXML
@@ -42,11 +44,12 @@ public class HistoryController implements Initializable {
     private TableColumn<info, String> isbn,title,genre;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         title.setCellValueFactory(cellData -> cellData.getValue().getTitle());
         genre.setCellValueFactory(cellData -> cellData.getValue().getGenre());
         isbn.setCellValueFactory(cellData -> cellData.getValue().getISBN());
        fill();
-       result.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+       history.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
                         Stage stage=new Stage();
            FXMLLoader loader = new FXMLLoader();
            loader.setLocation(getClass().getResource("BookView.fxml"));
@@ -75,13 +78,15 @@ stage.show();
 });
     }   
     private void fill(){
+        
         ObservableList <info> content=FXCollections.observableArrayList();
-        ArrayList<Book> blist=Library.bookList;
+        ArrayList<Book> blist=LoginController.user.borrowHistory;
         for(int i=0;i<blist.size();i++){
             Book tmp=blist.get(i);
             content.add(new info(tmp.ISBN,tmp.Title,tmp.Genre));
+            System.out.println(blist.get(i).Author);
         }
-        result.setItems(content);
+        history.setItems(content);
      
     }
     @FXML
@@ -91,7 +96,7 @@ stage.show();
                 else{
         Library searchable=new Library();
         ObservableList <info> returned = searchable.search(newText);
-        result.setItems(returned);
+        history.setItems(returned);
         }
         });;  
 
