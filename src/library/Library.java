@@ -151,6 +151,11 @@ Book b1 = new Book("Harry Potter and The Prisoner of Azkaban","JK Rowling",hpdes
 Book b2 = new Book("Treasure Island","Robert Louis Stevenson",tresdes,"3","Fiction","Amr books","tres.jpg");
 Book b3 = new Book("Seven Habits of Highly Effective People"," Stephen R. Covey",sevdes,"4","Self-Help","Mamdouh books","seven.jpg");
 Book b4 = new Book("Les Miserables","Victor Hugo",mesdes,"5","Fiction","Amr books","lesmes_.jpg");
+<<<<<<< HEAD
+  Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr","123");
+  Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay","456");
+  Borrower a3 = new Borrower("Amr","ExtremleyAyman","","a","3","salah","789");
+=======
 Book b5= new Book ("Harry Potter and the Philosopher's Stone", "J.K Rowling", hp1des, "6", "Fantasy", "Amr Books","hp1.jpg");  
 Book b6 = new Book ("Harry Potter and the Chamber of Secrets","J.K Rowling", hp2des, "7", "Fantasy", "Amr Books", "hp2.jpg");
 Book b7 = new Book ("Harry Potter and the Goblet of Fire","J.K Rowling", hp4des, "8", "Fantasy", "Amr Books", "hp4.jpg");
@@ -174,6 +179,7 @@ Book b22 = new Book ("The Girl with the Dragon Tattoo","Stieg Larsson",tattoo,"2
 Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr");
   Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay");
   Borrower a3 = new Borrower("Amr","ExtremleyAyman","","a","3","salah");
+>>>>>>> 1fb975dd7a53fa7b3ef8afb421ed393744039d11
   
   users.add(a1);
   users.add(a2);
