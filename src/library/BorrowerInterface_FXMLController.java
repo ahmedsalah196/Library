@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  */
 public class BorrowerInterface_FXMLController implements Initializable {
 
-    
+     Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg","Not available");
     
     @FXML
        private void handleStockButtonAction(ActionEvent event) {
@@ -124,7 +124,7 @@ stage.show();
                 //d.getUser(loginID.getText());
                 //System.out.println(loginID.getText());
          Parent root1 = loader.getRoot();            
-            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+         Undecorator undecorator = new Undecorator(stage, (Region) root1);
  
 // Default theme
  undecorator.getStylesheets().add("skin/undecorator.css");
@@ -137,25 +137,44 @@ stage.show();
 
        
           
-    public void getUser(String id){
-        Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg");
-        for(Borrower in:Library.users){
+    public Borrower getUser(String id) {
+
+        for (Borrower in : Library.users) {
             //System.out.println(id);
-            if(in.Username.equalsIgnoreCase(id)){
-               a = in;
-              
-               break;
+            if (in.Username.equalsIgnoreCase(id)) {
+                 a = in;
+               
+                break;
             }
+           
         }
-        
-         System.out.println(a.Username);
+
+        System.out.println("hi");
      
         for(Borrower in:Library.users){
           System.out.println(in.Username);
         }
+         return a;
     }
-       
-           
+    
+//    public void getPassword(String ps)
+//    {
+//         for(Borrower in:Library.users){
+//            //System.out.println(id);
+//            if(in.password.equalsIgnoreCase(ps)){
+//               a = in;
+//              
+//               break;
+//            }
+//        }
+//        
+//         System.out.println("hi");
+//     
+//        for(Borrower in:Library.users){
+//          System.out.println(in.password);
+//        }
+//    }
+  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

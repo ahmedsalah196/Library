@@ -6,6 +6,7 @@
 package library;
 
 import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
 import insidefx.undecorator.Undecorator;
 import java.io.IOException;
@@ -34,67 +35,117 @@ import javafx.stage.StageStyle;
  * @author ahmedsalah
  */
 public class LoginController implements Initializable {
+public static Borrower user = null;
+ 
     @FXML
     private JFXTextField loginID;
     @FXML
     private JFXPasswordField loginPassword;
- @FXML
+    @FXML
     private AnchorPane main;
 
     @FXML
     private AnchorPane pane;
+
     @FXML
     private void handleLibrarianButtonAction(ActionEvent event) {
-       FXMLLoader loader = new FXMLLoader();
-           loader.setLocation(getClass().getResource("Library_FXML.fxml"));
-         try {
-             loader.load();       
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-         
-             //FXMLController d = loader.getController();
-             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-                //d.getUser(loginID.getText());
-                System.out.println(loginID.getText());
-         Parent root1 = loader.getRoot();            
-            Undecorator undecorator = new Undecorator(stage, (Region) root1);
- 
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("Library_FXML.fxml"));
+        try {
+            loader.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //FXMLController d = loader.getController();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        //d.getUser(loginID.getText());
+        System.out.println(loginID.getText());
+        Parent root1 = loader.getRoot();
+        Undecorator undecorator = new Undecorator(stage, (Region) root1);
+
 // Default theme
- undecorator.getStylesheets().add("skin/undecorator.css");
- Scene scene1 = new Scene(undecorator);
- scene1.setFill(Color.TRANSPARENT);
-stage.setScene(scene1);
-stage.show();
+        undecorator.getStylesheets().add("skin/undecorator.css");
+        Scene scene1 = new Scene(undecorator);
+        scene1.setFill(Color.TRANSPARENT);
+        stage.setScene(scene1);
+        stage.show();
         stage.setResizable(false);
 
     }
+
     @FXML
     private void handleBorrowerButtonAction(ActionEvent event) {
-           FXMLLoader loader = new FXMLLoader();
-           loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
-         try {
-             loader.load();       
-        } catch(Exception e) {
-           e.printStackTrace();
-          }
-         
-           Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-                //d.getUser(loginID.getText());
-         Parent root1 = loader.getRoot();            
-            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+        JFXSnackbar snack = new JFXSnackbar(pane);
+        FXMLLoader loader = new FXMLLoader();
+       
+
+        // BorrowerInterface_FXMLController d = loader.getController();
+        BorrowerInterface_FXMLController d = loader.getController();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        for(int i = 0; i < Library.users.size(); i++) {
+            if (loginID.getText().equalsIgnoreCase(Library.users.get(i).Username)) {
+                if (loginPassword.getText().equals(Library.users.get(i).password)) {
+                    
+                    loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
+                    try {
+                        loader.load();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    user = Library.users.get(i);
+
+                } else {
+                    System.out.println("NOO");
+                    snack.show("Invalid Password",3000);
+
+                }
+                break;
+            }  
+            if(i== Library.users.size()-1)
+            {
+               snack.show("Invalid Username",3000);
+            }
+        }
+
+        
+        //d.getPassword(passID.getText());
+        Parent root1 = loader.getRoot();
+        Undecorator undecorator = new Undecorator(stage, (Region) root1);
+
+
+         //  loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
+//         try {
+//             loader.load();       
+//        } catch(Exception e) {
+//           e.printStackTrace();
+//          }
+       //  user = d.getUser(loginID.getText());
+         System.out.println(user.Username);
+            // BorrowerInterface_FXMLController d = loader.getController();
+           
+
+
+          // BorrowerInterface_FXMLController d = loader.getController();
+
+           
  
+
 // Default theme
- undecorator.getStylesheets().add("skin/undecorator.css");
- Scene scene1 = new Scene(undecorator);
- scene1.setFill(Color.TRANSPARENT);
-stage.setScene(scene1);
-stage.show();
+        undecorator.getStylesheets().add("skin/undecorator.css");
+        Scene scene1 = new Scene(undecorator);
+        scene1.setFill(Color.TRANSPARENT);
+        stage.setScene(scene1);
+        stage.show();
         stage.setResizable(false);
 
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    }    
+    }
+
     
 }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <file>file:/Users/ahmedsalah/Desktop/library/src/library/main.css</file>
             <file>file:/Users/ahmedsalah/Desktop/library/src/library/LoginController.java</file>
@@ -52,6 +54,13 @@
 >>>>>>> 2acce74afcffb0bf6ae92a5ad8774fd6b1dd6c2b
 >>>>>>> 65531f0dab472e46818911b7f63fa3ddab8364e0
 >>>>>>> 202a40da345c74285e8a7d24510f7bf1ecff8d1e
+=======
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/HistoryController.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/BorrowerInterface_FXMLController.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/LoginController.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/StockController1.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Borrower.java</file>
+>>>>>>> 7766a044e8aa30b655e6adf564fd1b0158bcb0df
         </group>
     </open-files>
 </project-private>

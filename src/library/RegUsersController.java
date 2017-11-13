@@ -30,16 +30,27 @@ import javafx.stage.Stage;
 
 
 public class RegUsersController implements Initializable {
-  @FXML
-    JFXTextField fname;
+   @FXML
+    private JFXTextField lname;
+
     @FXML
-    JFXTextField lname;
+    private JFXTextField bdate;
+
     @FXML
-    JFXTextField bdate;
+    private JFXTextField email;
+
     @FXML
-    JFXTextField num;
+    private JFXTextField num;
+
     @FXML
-    JFXTextField email;
+    private JFXTextField fname1;
+
+    @FXML
+    private JFXTextField user;
+
+    @FXML
+    private JFXTextField pass;
+
 
     /**
      * Initializes the controller class.
@@ -56,7 +67,7 @@ public class RegUsersController implements Initializable {
      @FXML
 
     private void reg(ActionEvent event){
-       Library.users.add(new Borrower(fname.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),"changethis"));
+       Library.users.add(new Borrower(fname1.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),user.getText(),pass.getText()));
        for(int i = 0 ; i <Library.users.size();i++){
            System.out.print(Library.users.get(i).firstName);
        }
