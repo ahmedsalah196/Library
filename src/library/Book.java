@@ -24,8 +24,8 @@ public class Book {
     public String cover;
     public float rating;
     public Image image;
-    public Calendar borrowDate;
-    public Calendar returnDate;
+    public String borrowDate;
+    public String returnDate;
     public Boolean available = true;
     
     
