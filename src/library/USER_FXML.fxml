@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXBadge?>
-<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,9 +8,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="427.0" prefWidth="631.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.USER_Controller">
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="427.0" prefWidth="631.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.USER_Controller">
    <children>
-      <Label id="background" layoutX="-4.0" prefHeight="441.0" prefWidth="631.0" />
       <ImageView fx:id="img" fitHeight="150.0" fitWidth="129.0" layoutX="54.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@boy.png" />
@@ -29,7 +27,7 @@
                <children>
                   <HBox prefHeight="44.0" prefWidth="292.0">
                      <children>
-                        <Label prefHeight="44.0" prefWidth="113.0" text="Last Name" textFill="#4e9e83" />
+                        <Label prefHeight="44.0" prefWidth="103.0" text="Last Name" textFill="#4e9e83" />
                         <Label fx:id="lname" prefHeight="44.0" prefWidth="201.0" text="Doe" textFill="#c22d9f" />
                      </children>
                   </HBox>
@@ -37,7 +35,7 @@
                      <children>
                         <HBox prefHeight="40.0" prefWidth="292.0">
                            <children>
-                              <Label prefHeight="43.0" prefWidth="124.0" text="Gender" textFill="#4e9e83" />
+                              <Label prefHeight="40.0" prefWidth="113.0" text="Gender" textFill="#4e9e83" />
                               <Label fx:id="gender" prefHeight="43.0" prefWidth="212.0" text="Male" textFill="#c22d9f" />
                            </children>
                         </HBox>
@@ -49,7 +47,7 @@
                         </HBox>
                         <HBox prefHeight="38.0" prefWidth="292.0">
                            <children>
-                              <Label prefHeight="51.0" prefWidth="122.0" text="ID Number" textFill="#4e9e83" />
+                              <Label prefHeight="38.0" prefWidth="105.0" text="ID Number" textFill="#4e9e83" />
                               <Label fx:id="dexpire" prefHeight="54.0" prefWidth="206.0" text="234789020110" textFill="#c22d9f" />
                            </children>
                         </HBox>
@@ -62,10 +60,14 @@
       <HBox layoutX="227.0" layoutY="98.0" prefHeight="44.0" prefWidth="292.0">
          <children>
             <Label prefHeight="90.0" prefWidth="107.0" stylesheets="@main.css" text="Username" textFill="#4e9e83" />
-            <Label fx:id="uname" prefHeight="53.0" prefWidth="186.0" text="John_Doe91" textFill="#c22d9f" />
+            <Label fx:id="uname" prefHeight="44.0" prefWidth="202.0" text="John_Doe91" textFill="#c22d9f" />
          </children>
       </HBox>
-      <JFXBadge />
-      <JFXHamburger fx:id="menu" alignment="CENTER" cache="true" layoutX="4.0" layoutY="3.0" prefHeight="23.0" prefWidth="25.0" />
+      <ImageView fitHeight="27.0" fitWidth="36.0" layoutX="55.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@return-button.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="55.0" layoutY="1.0" onAction="#back" opacity="0.0" prefHeight="27.0" prefWidth="27.0" ripplerFill="#eb2d2d" text=" " />
    </children>
 </AnchorPane>

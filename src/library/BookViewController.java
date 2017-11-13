@@ -2,18 +2,28 @@
 package library;
 
 import com.jfoenix.controls.JFXTextArea;
+import insidefx.undecorator.Undecorator;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.event.EventType;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -37,31 +47,32 @@ Label isbn;
 Label pub;
 @FXML
  Label q;       
+ String s;
  
- String des = "One of the most celebrated and popular historical romances ever written. The Three Musketeers tell the story of the early adventures of the young Gascon gentleman d'Artagnan and his three friends from the regiment of the King's Musketeers: Athos, Porthos, and Aramis.\n" +
-"\n" +
-"Under the watchful eye of their patron M. de Treville, the four defend the honour of the regiment against the guards of the Cardinal Richelieu and the honor of the queen against the machinations of the Cardinal himself as the power struggles of 17th-century France are vividly played out in the background.\n" +
-"\n" +
-"But their most dangerous encounter is with the Cardinal's spy: Milady, one of literature's most memorable female villains.";
-Book b = new Book("The Three Musketeers","Alexandre Dumas",des,"13j3n32","Fiction","Penguin books","threemusket.jpg");
     /**
      * Initializes the controller class.
      */
 
     @Override
     public void initialize(URL url, ResourceBundle rb)  {
-        
-        
        System.out.println("hi");
-
-     
-     
-       ini();
+       //ini();
+        title.setText(s);
     }    
     
-     @FXML
-    private void ini()  {
-       
+    
+     public void getBook(String i){
+        Book b = new Book("Not available","Not available","Not available","Not available","Not available","Not available","na.jpg");
+         for(Book in:Library.bookList){
+            System.out.println(i);
+            if(in.ISBN.equalsIgnoreCase(i)){
+               b = in;
+               System.out.println(b.Author);
+               break;
+            }
+        }
+      
+      this.s = b.Title;
         title.setText(b.Title);
         author.setText(b.Author);
         Genre.setText(b.Genre);
@@ -71,9 +82,54 @@ Book b = new Book("The Three Musketeers","Alexandre Dumas",des,"13j3n32","Fictio
         pub.setText(b.Publisher);
         isbn.setText(b.ISBN);
         summ.setEditable(false);
-     
+        
         
     }
+ 
+    private void func(){
+        title.setText(s);
+    }
+    @FXML
+    private void back(ActionEvent event){
+        FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("stock.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+             //FXMLController d = loader.getController();
+             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+                //d.getUser(loginID.getText());
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
+        stage.setResizable(false);
+
+    }
     
+   
     
+   
+      public void init(Book b)  {
+       // System.out.println(b.Title);
+       
+        /*author.setText(b.Author);
+        Genre.setText(b.Genre);
+        cover.setImage(b.image);
+        summ.setText(b.Description);
+        q.setText(Integer.toString(b.quantity));
+        pub.setText(b.Publisher);
+        isbn.setText(b.ISBN);
+        summ.setEditable(false);*/
+        
+    }
 }

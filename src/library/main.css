@@ -26,11 +26,36 @@
     -fx-pref-width:150;
 }
 .pane{
-    -fx-background-color: #000;
+    -fx-background-color: #333;
+}
+#field{
+    -fx-text-inner-color: #a0a2ab; 
+    -fx-prompt-text-fill: #a0a2ab;
 }
 #background{
-    -fx-background-color: #FFF;
+    -fx-background-color: #000;
 }
+.undecorator-background {
+  -fx-fill: radial-gradient(focus-angle 45deg, focus-distance 20%, center 25% 25%, radius 50%, reflect, #eeeeee88, #55555588 75%, dimgray);
+  -fx-arc-width:25;
+  -fx-arc-height:25;
+}
+.decoration-background{
+-fx-fill: radial-gradient(focus-angle 45deg, focus-distance 20%, center 25% 25%, radius 50%, reflect, #eeeeee88, #aaaaaa88 75%, gray);
+-fx-stroke-width: 0;
+-fx-arc-width:20px;
+-fx-arc-height:20px;
+}
+/*
+Defines the rectangle responsible for the shadow
+*/
+.decoration-shadow{
+-fx-fill: black;
+-fx-stroke-width: 0;
+-fx-arc-width:20px;
+-fx-arc-height:20px;
+}
+
 /*.label{
     -fx-background-color: wheat;
 }*/
