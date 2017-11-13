@@ -72,16 +72,20 @@ stage.show();
     @FXML
     private void handleBorrowerButtonAction(ActionEvent event) {
            FXMLLoader loader = new FXMLLoader();
-           loader.setLocation(getClass().getResource("UserMenu.fxml"));
+           loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
          try {
              loader.load();       
         } catch(Exception e) {
            e.printStackTrace();
           }
          
-             UserMenuController d = loader.getController();
+<<<<<<< HEAD
+            // BorrowerInterface_FXMLController d = loader.getController();
+=======
+            BorrowerInterface_FXMLController d = loader.getController();
+>>>>>>> 65531f0dab472e46818911b7f63fa3ddab8364e0
              Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
-                d.getUser(loginID.getText());
+                //d.getUser(loginID.getText());
          Parent root1 = loader.getRoot();            
             Undecorator undecorator = new Undecorator(stage, (Region) root1);
  
