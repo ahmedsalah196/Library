@@ -176,7 +176,7 @@ stage.show();
     @FXML
        private void borrowBook(ActionEvent event) {
           JFXSnackbar snack = new JFXSnackbar(rootpane);
-           Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg");
+           Borrower a = new Borrower("Not available","Not available","Not available","Not available","Not available","na.jpg","Not available");
            Book b = new Book("Not available","Not available","Not available","Not available","Not available","Not available","na.jpg");
          for(Book in:Library.bookList){
         

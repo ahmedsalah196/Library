@@ -40,6 +40,10 @@ public class RegUsersController implements Initializable {
     JFXTextField num;
     @FXML
     JFXTextField email;
+    @FXML
+    JFXTextField password;
+    @FXML
+    JFXTextField username;
 
     /**
      * Initializes the controller class.
@@ -56,7 +60,7 @@ public class RegUsersController implements Initializable {
      @FXML
 
     private void reg(ActionEvent event){
-       Library.users.add(new Borrower(fname.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),"changethis"));
+       Library.users.add(new Borrower(fname.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),username.getText(),password.getText()));
        for(int i = 0 ; i <Library.users.size();i++){
            System.out.print(Library.users.get(i).firstName);
        }
