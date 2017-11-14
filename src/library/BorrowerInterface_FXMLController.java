@@ -135,11 +135,6 @@ stage.show();
         stage.setResizable(false);
        }
 
-
-          
-//       public void getUser(Borrower d) {
-//           a = d;
-//       }
        
          
 //    public void getUser(String id) {
@@ -193,9 +188,7 @@ stage.show();
 //          System.out.println(in.password);
 //        }
 //    }
-       
-
-    
+  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
