@@ -29,6 +29,7 @@ public class Library extends Application {
     
      public static ArrayList<Book> bookList = new ArrayList<Book>();
      public static ArrayList<Borrower> users = new ArrayList<Borrower>();
+      public static ArrayList<Borrower> librarians = new ArrayList<Borrower>();
      public static ArrayList<borrowItem> borrowList = new ArrayList<borrowItem>();
      public ObservableList<info> search(String str){
       str.toLowerCase();
@@ -170,10 +171,13 @@ Book b20 = new Book ("I Am Malala", "Malala Yousafzai",malala,"21","Biography","
 Book b21 = new Book ("The Diary of a Young Girl", "Anne Frank",anne,"22","Biography","Yasmin Books","anne frank.jpg");
 Book b22 = new Book ("The Girl with the Dragon Tattoo","Stieg Larsson",tattoo,"23","Thriller","Sarah Books","tattoo.jpg");
 
-Borrower a1 = new Borrower("Amr","Ayman","3eedmilad","a","1","amr","123");
-Borrower a2 = new Borrower("Loay","Hamdy","6/10/1996","a","2","loay","456");
-Borrower a3 = new Borrower("Ahmed","Salah","3eedmilad","a","3","salah","789");
-  
+Borrower a1 = new Borrower("Amr","Ayman","1/10/1996","amr_ayman@gmail.com","1","amr","123");
+Borrower a2 = new Borrower("Loay","Hamdy","6/10/1996","loay_hamdy@gmail.com","2","loay","456");
+Borrower a3 = new Borrower("Ahmed","Salah","10/1/1996","ahmed_salah@hotmail.com","3","salah","789");
+ 
+Borrower l1 = new Borrower ("Yasmin", "Essam","14/6/1996","yasmin_essam@gmail.com","10","yasmin","123");
+Borrower l2 = new Borrower ("Mirna", "Nagy","24/12/1995","mirna_nagy@hotmail.com","11","mirna","456");
+Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.com","12","sarah","789");
   
 //Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr");
 //  Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay");
@@ -182,6 +186,11 @@ Borrower a3 = new Borrower("Ahmed","Salah","3eedmilad","a","3","salah","789");
   users.add(a1);
   users.add(a2);
   users.add(a3);
+  
+  librarians.add(l1);
+  librarians.add(l2);
+  librarians.add(l3);
+  
   bookList.add(b);
   bookList.add(b1);
   bookList.add(b2);

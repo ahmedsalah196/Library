@@ -36,6 +36,7 @@ import javafx.stage.StageStyle;
  */
 public class LoginController implements Initializable {
 public static Borrower user = null;
+public static Borrower librarian = null;
  
     @FXML
     private JFXTextField loginID;
@@ -49,20 +50,51 @@ public static Borrower user = null;
 
     @FXML
     private void handleLibrarianButtonAction(ActionEvent event) {
+        JFXSnackbar snack = new JFXSnackbar(pane);
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("Library_FXML.fxml"));
-        try {
-            loader.load();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+       // loader.setLocation(getClass().getResource("Library_FXML.fxml"));
+      
 
         //FXMLController d = loader.getController();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        //d.getUser(loginID.getText());
-        System.out.println(loginID.getText());
+
+        for(int i = 0; i < Library.librarians.size(); i++) {
+            if (loginID.getText().equalsIgnoreCase(Library.librarians.get(i).Username)) {
+                if (loginPassword.getText().equals(Library.librarians.get(i).password)) {
+                    
+                  //  d.getUser(Library.users.get(i).Username);
+                  
+                    loader.setLocation(getClass().getResource("Library_FXML.fxml"));
+                    try {
+                        loader.load();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    librarian = Library.librarians.get(i);
+
+
+                } else {
+                    System.out.println("NOO");
+                    snack.show("Invalid Password",3000);
+
+                }
+                break;
+            }  
+            if(i== Library.librarians.size()-1)
+            {
+               snack.show("Invalid Username",3000);
+            }
+        }
+
+        // d.getUser(loginID.getText());
+
+        //d.getPassword(passID.getText());
         Parent root1 = loader.getRoot();
         Undecorator undecorator = new Undecorator(stage, (Region) root1);
+
+       //  user = d.getUser(loginID.getText());
+         System.out.println(librarian.Username);
+            // BorrowerInterface_FXMLController d = loader.getController();
 
 // Default theme
         undecorator.getStylesheets().add("skin/undecorator.css");

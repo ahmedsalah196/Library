@@ -19,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
@@ -31,7 +32,16 @@ import javafx.stage.StageStyle;
  * @author ahmedsalah
  */
 public class USER_Controller implements Initializable {
-
+  @FXML
+    private Label fname;
+    @FXML
+    private Label lname;
+    @FXML
+    private Label uname;
+    @FXML
+    private Label id;
+    @FXML
+    private Label dbirth;
     @FXML
     private void back(ActionEvent event){
         FXMLLoader loader = new FXMLLoader();
@@ -60,7 +70,11 @@ stage.show();
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        fname.setText(LoginController.librarian.firstName);
+        lname.setText(LoginController.librarian.lastName);
+        uname.setText(LoginController.librarian.Username);
+        id.setText(LoginController.librarian.cardNumber);
+        dbirth.setText(LoginController.librarian.birthdate);
     }    
     
 }
