@@ -170,9 +170,9 @@ Book b20 = new Book ("I Am Malala", "Malala Yousafzai",malala,"21","Biography","
 Book b21 = new Book ("The Diary of a Young Girl", "Anne Frank",anne,"22","Biography","Yasmin Books","anne frank.jpg");
 Book b22 = new Book ("The Girl with the Dragon Tattoo","Stieg Larsson",tattoo,"23","Thriller","Sarah Books","tattoo.jpg");
 
-Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr","123");
-Borrower a2 = new Borrower("Loay","VeryAyman","","a","2","loay","456");
-Borrower a3 = new Borrower("Ahmed","ExtremleyAyman","","a","3","salah","789");
+Borrower a1 = new Borrower("Amr","Ayman","3eedmilad","a","1","amr","123");
+Borrower a2 = new Borrower("Loay","Hamdy","6/10/1996","a","2","loay","456");
+Borrower a3 = new Borrower("Ahmed","Salah","3eedmilad","a","3","salah","789");
   
   
 //Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr");

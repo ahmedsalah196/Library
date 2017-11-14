@@ -31,22 +31,22 @@ import javafx.stage.Stage;
 
 public class RegUsersController implements Initializable {
    @FXML
+    private JFXTextField fname1;
+    
+    @FXML
     private JFXTextField lname;
+    
+    @FXML
+    private JFXTextField userName;
+    
+     @FXML
+    private JFXTextField email;
 
     @FXML
     private JFXTextField bdate;
 
     @FXML
-    private JFXTextField email;
-
-    @FXML
     private JFXTextField num;
-
-    @FXML
-    private JFXTextField fname1;
-
-    @FXML
-    private JFXTextField user;
 
     @FXML
     private JFXTextField pass;
@@ -67,7 +67,7 @@ public class RegUsersController implements Initializable {
      @FXML
 
     private void reg(ActionEvent event){
-       Library.users.add(new Borrower(fname1.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),user.getText(),pass.getText()));
+       Library.users.add(new Borrower(fname1.getText(),lname.getText(),bdate.getText(),email.getText(),num.getText(),userName.getText(),pass.getText()));
        for(int i = 0 ; i <Library.users.size();i++){
            System.out.print(Library.users.get(i).firstName);
        }
