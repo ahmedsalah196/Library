@@ -78,8 +78,6 @@ public static Borrower user = null;
     private void handleBorrowerButtonAction(ActionEvent event) {
         JFXSnackbar snack = new JFXSnackbar(pane);
         FXMLLoader loader = new FXMLLoader();
-       
-
         // BorrowerInterface_FXMLController d = loader.getController();
         BorrowerInterface_FXMLController d = loader.getController();
 
@@ -89,6 +87,8 @@ public static Borrower user = null;
             if (loginID.getText().equalsIgnoreCase(Library.users.get(i).Username)) {
                 if (loginPassword.getText().equals(Library.users.get(i).password)) {
                     
+                  //  d.getUser(Library.users.get(i).Username);
+                  
                     loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
                     try {
                         loader.load();
@@ -96,6 +96,7 @@ public static Borrower user = null;
                         e.printStackTrace();
                     }
                     user = Library.users.get(i);
+
 
                 } else {
                     System.out.println("NOO");
@@ -110,28 +111,15 @@ public static Borrower user = null;
             }
         }
 
-        
+        // d.getUser(loginID.getText());
+
         //d.getPassword(passID.getText());
         Parent root1 = loader.getRoot();
         Undecorator undecorator = new Undecorator(stage, (Region) root1);
 
-
-         //  loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
-//         try {
-//             loader.load();       
-//        } catch(Exception e) {
-//           e.printStackTrace();
-//          }
        //  user = d.getUser(loginID.getText());
          System.out.println(user.Username);
             // BorrowerInterface_FXMLController d = loader.getController();
-           
-
-
-          // BorrowerInterface_FXMLController d = loader.getController();
-
-           
- 
 
 // Default theme
         undecorator.getStylesheets().add("skin/undecorator.css");
