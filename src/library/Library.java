@@ -217,7 +217,6 @@ Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr","123");
  scene1.setFill(Color.TRANSPARENT);
 stage.setScene(scene1);
 stage.show();
-
         stage.setResizable(false);
     }
 

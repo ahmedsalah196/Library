@@ -124,8 +124,6 @@ public static Borrower user = null;
 //          }
        //  user = d.getUser(loginID.getText());
          System.out.println(user.Username);
-         
-
             // BorrowerInterface_FXMLController d = loader.getController();
            
 
