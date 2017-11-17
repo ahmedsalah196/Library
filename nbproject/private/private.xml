@@ -3,68 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/main.css</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/LoginController.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/Library.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/BookViewController.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/StockController1.java</file>
-            <file>file:/Users/ahmedsalah/Desktop/library/src/library/login.fxml</file>
-=======
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BorrowerList_FXMLController.java</file>
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/Library.java</file>
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BorProfileController.java</file>
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/HistoryController.java</file>
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/RequestBook.fxml</file>
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/RequestBookController.java</file>
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BorrowerInterface_FXMLController.java</file>
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BookViewController.java</file>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/BookViewController.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/Library.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/LoginController.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/Borrower.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/FXMLController.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/BorrowerList_FXMLController.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/StockController.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/BorrowerListData.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/Book.java</file>
-            <file>file:/C:/Users/Mirna/Documents/GitHub/library/src/library/USER_Controller.java</file>
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/Farida%20Abouish/Documents/GitHub/library/src/library/BorrowerList_FXMLController.java</file>
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/sarah/OneDrive/Documents/GitHub/library/src/library/searchic.png</file>
-            <file>file:/C:/Users/sarah/OneDrive/Documents/GitHub/library/src/library/Stockato.fxml</file>
-            <file>file:/C:/Users/sarah/OneDrive/Documents/GitHub/library/src/library/FXMLController.java</file>
-=======
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/Library.java</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/Book.java</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/main.css</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/UserMenu.fxml</file>
-            <file>file:/C:/Users/Amr%20Ayman/Documents/GitHub/library/src/library/LoginController.java</file>
->>>>>>> 603ad5e9b88d8fb7177e2e3b5f307c418a25dd61
->>>>>>> b2e2adea161ee3c8b56e5d5c68c74132ad586113
->>>>>>> 949d5a87320c92bd7362f2e61b008bb31d63f844
->>>>>>> 2acce74afcffb0bf6ae92a5ad8774fd6b1dd6c2b
->>>>>>> 65531f0dab472e46818911b7f63fa3ddab8364e0
->>>>>>> 202a40da345c74285e8a7d24510f7bf1ecff8d1e
-=======
             <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/HistoryController.java</file>
             <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Library.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Book.java</file>
             <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/BorrowerInterface_FXMLController.java</file>
             <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/LoginController.java</file>
             <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/StockController1.java</file>
-<<<<<<< HEAD
-=======
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/USER_Controller.java</file>
+            <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/BorProfileController.java</file>
             <file>file:/C:/Users/Yasmin/Documents/GitHub/library/src/library/Borrower.java</file>
->>>>>>> 7766a044e8aa30b655e6adf564fd1b0158bcb0df
->>>>>>> 961a4a0a56d1754c743f34870af5798088222617
         </group>
     </open-files>
 </project-private>
