@@ -109,15 +109,15 @@ class write implements Runnable {
             e.getMessage();
         }
         System.out.println("here");
-//        Type type1=new TypeToken<ArrayList<Book>>(){}.getType();
-//        json=gson.toJson(Library.bookList,type1);
-//        try (FileWriter fw = new FileWriter("bookList.json")) {
-//                fw.write(json);
-//            }
-//        catch(Exception e){
-//            e.getMessage();
-//        }
-//        
+        Type type1=new TypeToken<ArrayList<Book>>(){}.getType();
+        json=gson.toJson(Library.bookList,type1);
+        try (FileWriter fw = new FileWriter("bookList.json")) {
+                fw.write(json);
+            }
+        catch(Exception e){
+            e.getMessage();
+        }
+        
     }
 }
 
@@ -247,29 +247,29 @@ String tattoo="A spellbinding amalgam of murder mystery, family saga, love story
 "\n" +
 "It’s about Mikael Blomkvist, a crusading journalist recently at the wrong end of a libel case, hired to get to the bottom of Harriet’s disappearance . . . and about Lisbeth Salander, a twenty-four-year-old pierced and tattooed genius hacker possessed of the hard-earned wisdom of someone twice her age—and a terrifying capacity for ruthlessness to go with it—who assists Blomkvist with the investigation. This unlikely team discovers a vein of nearly unfathomable iniquity running through the Vanger family, astonishing corruption in the highest echelons of Swedish industrialism—and an unexpected connection between themselves.";
 String mesdes = "Introducing one of the most famous characters in literature, Jean Valjean—the noble peasant imprisoned for stealing a loaf of bread—Les Misérables ranks among the greatest novels of all time. In it, Victor Hugo takes readers deep into the Parisian underworld, immerses them in a battle between good and evil, and carries them to the barricades during the uprising of 1832 with a breathtaking realism that is unsurpassed in modern prose. Within his dramatic story are themes that capture the intellect and the emotions: crime and punishment, the relentless persecution of Valjean by Inspector Javert, the desperation of the prostitute Fantine, the amorality of the rogue Thénardier, and the universal desire to escape the prisons of our own minds. Les Misérables gave Victor Hugo a canvas upon which he portrayed his criticism of the French political and judicial systems, but the portrait that resulted is larger than life, epic in scope—an extravagant spectacle that dazzles the senses even as it touches the heart.";
-Book b = new Book("The Three Musketeers","Alexandre Dumas",des,"1","Fiction","Penguin books","threemusket.jpg");
-Book b1 = new Book("Harry Potter and The Prisoner of Azkaban","JK Rowling",hpdes,"2","Fantasy","Amr books","hp.jpg");
-Book b2 = new Book("Treasure Island","Robert Louis Stevenson",tresdes,"3","Fiction","Amr books","tres.jpg");
-Book b3 = new Book("Seven Habits of Highly Effective People"," Stephen R. Covey",sevdes,"4","Self-Help","Mamdouh books","seven.jpg");
-Book b4 = new Book("Les Miserables","Victor Hugo",mesdes,"5","Fiction","Amr books","lesmes_.jpg");
-Book b5= new Book ("Harry Potter and the Philosopher's Stone", "J.K Rowling", hp1des, "6", "Fantasy", "Amr Books","hp1.jpg");  
-Book b6 = new Book ("Harry Potter and the Chamber of Secrets","J.K Rowling", hp2des, "7", "Fantasy", "Amr Books", "hp2.jpg");
-Book b7 = new Book ("Harry Potter and the Goblet of Fire","J.K Rowling", hp4des, "8", "Fantasy", "Amr Books", "hp4.jpg");
-Book b8 = new Book ("Harry Potter and the Order of the Phoenix","J.K Rowling", hp5des, "9", "Fantasy", "Amr Books", "hp5.jpg");
-Book b9 = new Book ("Harry Potter and the Half Blood Prince","J.K Rowling", hp6des, "10", "Fantasy", "Amr Books", "hp6.jpg");
-Book b10 = new Book ("Harry Potter and the Deathly Hallows","J.K Rowling", hp7des, "11", "Fantasy", "Amr Books", "hp7.jpg");
-Book b11 = new Book ("The Da Vinci Code", "Dan Brown", davinci, "12","Thriller","Yasmin Books","davinci.jpg");
-Book b12 = new Book ("The Lost Symbol", "Dan Brown", symbol, "13","Thriller","Yasmin Books","symbol.jpg");
-Book b13 = new Book ("Men are from Mars, Women are from Venus", "John Gray",women,"14","Self-Help","Sarah Books","women.jpg");
-Book b14 = new Book ("Why Mars and Venus Collide", "John Gray",women2,"15","Self-Help","Sarah Books","women2.jpg");
-Book b15 = new Book ("Tuesdays with Morrie", "Mitch Albom", morrie,"16", "Biography","Sarah Books","morrie.jpg");
-Book b16= new Book ("The Time Keeper","Mitch Albom",time, "17","Fiction","Sarah Books","TimeKeeper.jpg");
-Book b17= new Book ("A Thousand Splendid Suns", "Khaled Hosseini",splendid, "18","Drama","Yasmin Books","splendid.jpg");
-Book b18= new Book ("The Kite Runner", "Khaled Hosseini",kite, "19","Drama","Yasmin Books","The Kite Runner.jpe");
-Book b19 = new Book ("IT", "Stephen King",it,"20","Thriller","Yasmin Books","IT.jpg");
-Book b20 = new Book ("I Am Malala", "Malala Yousafzai",malala,"21","Biography","Sarah Books","malala.jpg");
-Book b21 = new Book ("The Diary of a Young Girl", "Anne Frank",anne,"22","Biography","Yasmin Books","anne frank.jpg");
-Book b22 = new Book ("The Girl with the Dragon Tattoo","Stieg Larsson",tattoo,"23","Thriller","Sarah Books","tattoo.jpg");
+Book b = new Book("The Three Musketeers","Alexandre Dumas","","1","Fiction","Penguin books","threemusket.jpg");
+//Book b1 = new Book("Harry Potter and The Prisoner of Azkaban","JK Rowling",hpdes,"2","Fantasy","Amr books","hp.jpg");
+//Book b2 = new Book("Treasure Island","Robert Louis Stevenson",tresdes,"3","Fiction","Amr books","tres.jpg");
+//Book b3 = new Book("Seven Habits of Highly Effective People"," Stephen R. Covey",sevdes,"4","Self-Help","Mamdouh books","seven.jpg");
+//Book b4 = new Book("Les Miserables","Victor Hugo",mesdes,"5","Fiction","Amr books","lesmes_.jpg");
+//Book b5= new Book ("Harry Potter and the Philosopher's Stone", "J.K Rowling", hp1des, "6", "Fantasy", "Amr Books","hp1.jpg");  
+//Book b6 = new Book ("Harry Potter and the Chamber of Secrets","J.K Rowling", hp2des, "7", "Fantasy", "Amr Books", "hp2.jpg");
+//Book b7 = new Book ("Harry Potter and the Goblet of Fire","J.K Rowling", hp4des, "8", "Fantasy", "Amr Books", "hp4.jpg");
+//Book b8 = new Book ("Harry Potter and the Order of the Phoenix","J.K Rowling", hp5des, "9", "Fantasy", "Amr Books", "hp5.jpg");
+//Book b9 = new Book ("Harry Potter and the Half Blood Prince","J.K Rowling", hp6des, "10", "Fantasy", "Amr Books", "hp6.jpg");
+//Book b10 = new Book ("Harry Potter and the Deathly Hallows","J.K Rowling", hp7des, "11", "Fantasy", "Amr Books", "hp7.jpg");
+//Book b11 = new Book ("The Da Vinci Code", "Dan Brown", davinci, "12","Thriller","Yasmin Books","davinci.jpg");
+//Book b12 = new Book ("The Lost Symbol", "Dan Brown", symbol, "13","Thriller","Yasmin Books","symbol.jpg");
+//Book b13 = new Book ("Men are from Mars, Women are from Venus", "John Gray",women,"14","Self-Help","Sarah Books","women.jpg");
+//Book b14 = new Book ("Why Mars and Venus Collide", "John Gray",women2,"15","Self-Help","Sarah Books","women2.jpg");
+//Book b15 = new Book ("Tuesdays with Morrie", "Mitch Albom", morrie,"16", "Biography","Sarah Books","morrie.jpg");
+//Book b16= new Book ("The Time Keeper","Mitch Albom",time, "17","Fiction","Sarah Books","TimeKeeper.jpg");
+//Book b17= new Book ("A Thousand Splendid Suns", "Khaled Hosseini",splendid, "18","Drama","Yasmin Books","splendid.jpg");
+//Book b18= new Book ("The Kite Runner", "Khaled Hosseini",kite, "19","Drama","Yasmin Books","The Kite Runner.jpe");
+//Book b19 = new Book ("IT", "Stephen King",it,"20","Thriller","Yasmin Books","IT.jpg");
+//Book b20 = new Book ("I Am Malala", "Malala Yousafzai",malala,"21","Biography","Sarah Books","malala.jpg");
+//Book b21 = new Book ("The Diary of a Young Girl", "Anne Frank",anne,"22","Biography","Yasmin Books","anne frank.jpg");
+//Book b22 = new Book ("The Girl with the Dragon Tattoo","Stieg Larsson",tattoo,"23","Thriller","Sarah Books","tattoo.jpg");
 
 Borrower a1 = new Borrower("Amr","Ayman","1/10/1996","amr_ayman@gmail.com","1","amr","123");
 Borrower a2 = new Borrower("Loay","Hamdy","6/10/1996","loay_hamdy@gmail.com","2","loay","456");
@@ -292,28 +292,28 @@ Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.co
   librarians.add(l3);
   
   bookList.add(b);
-  bookList.add(b1);
-  bookList.add(b2);
-  bookList.add(b3);
-  bookList.add(b4);
-  bookList.add(b5);
-  bookList.add(b6);
-  bookList.add(b7);
-  bookList.add(b8);
-  bookList.add(b9);
-  bookList.add(b10);
-         bookList.add(b11);
-         bookList.add(b12);
-         bookList.add(b13);
-         bookList.add(b14);
-         bookList.add(b15);
-         bookList.add(b16);
-         bookList.add(b17);
-         bookList.add(b18);
-         bookList.add(b19);
-         bookList.add(b20);
-         bookList.add(b21);
-         bookList.add(b22);
+//  bookList.add(b1);
+//  bookList.add(b2);
+//  bookList.add(b3);
+//  bookList.add(b4);
+//  bookList.add(b5);
+//  bookList.add(b6);
+//  bookList.add(b7);
+//  bookList.add(b8);
+//  bookList.add(b9);
+//  bookList.add(b10);
+//         bookList.add(b11);
+//         bookList.add(b12);
+//         bookList.add(b13);
+//         bookList.add(b14);
+//         bookList.add(b15);
+//         bookList.add(b16);
+//         bookList.add(b17);
+//         bookList.add(b18);
+//         bookList.add(b19);
+//         bookList.add(b20);
+//         bookList.add(b21);
+//         bookList.add(b22);
   
  Undecorator undecorator = new Undecorator(stage, (Region) root);
  
@@ -325,7 +325,8 @@ Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.co
 stage.setScene(scene1);
 stage.show();
         stage.setResizable(false);
-
+        write wr=new write();
+        wr.run();
     }
 
     /**
@@ -333,7 +334,6 @@ stage.show();
      */
     public static void main(String[] args) {
         launch(args);
-        write wr=new write();
-        wr.run();
+
     }
 }
