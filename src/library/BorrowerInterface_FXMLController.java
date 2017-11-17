@@ -136,7 +136,21 @@ stage.show();
        }
 
        
-          
+         
+//    public void getUser(String id) {
+//
+//        for (Borrower in : Library.users) {
+//            //System.out.println(id);
+//            if (in.Username.equalsIgnoreCase(id)) {
+//                 a = in;
+//                break;
+//            }
+//        }
+//
+//        System.out.println("hi");
+//    }
+    ////////////////////////////////////////////////////
+
     public Borrower getUser(String id) {
 
         for (Borrower in : Library.users) {

@@ -29,6 +29,7 @@ public class Library extends Application {
     
      public static ArrayList<Book> bookList = new ArrayList<Book>();
      public static ArrayList<Borrower> users = new ArrayList<Borrower>();
+      public static ArrayList<Borrower> librarians = new ArrayList<Borrower>();
      public static ArrayList<borrowItem> borrowList = new ArrayList<borrowItem>();
      public ObservableList<info> search(String str){
       str.toLowerCase();
@@ -151,13 +152,12 @@ Book b1 = new Book("Harry Potter and The Prisoner of Azkaban","JK Rowling",hpdes
 Book b2 = new Book("Treasure Island","Robert Louis Stevenson",tresdes,"3","Fiction","Amr books","tres.jpg");
 Book b3 = new Book("Seven Habits of Highly Effective People"," Stephen R. Covey",sevdes,"4","Self-Help","Mamdouh books","seven.jpg");
 Book b4 = new Book("Les Miserables","Victor Hugo",mesdes,"5","Fiction","Amr books","lesmes_.jpg");
-
 Book b5= new Book ("Harry Potter and the Philosopher's Stone", "J.K Rowling", hp1des, "6", "Fantasy", "Amr Books","hp1.jpg");  
 Book b6 = new Book ("Harry Potter and the Chamber of Secrets","J.K Rowling", hp2des, "7", "Fantasy", "Amr Books", "hp2.jpg");
 Book b7 = new Book ("Harry Potter and the Goblet of Fire","J.K Rowling", hp4des, "8", "Fantasy", "Amr Books", "hp4.jpg");
 Book b8 = new Book ("Harry Potter and the Order of the Phoenix","J.K Rowling", hp5des, "9", "Fantasy", "Amr Books", "hp5.jpg");
 Book b9 = new Book ("Harry Potter and the Half Blood Prince","J.K Rowling", hp6des, "10", "Fantasy", "Amr Books", "hp6.jpg");
-Book b10 = new Book ("Harry Potter and the Deathley Hallows","J.K Rowling", hp7des, "11", "Fantasy", "Amr Books", "hp7.jpg");
+Book b10 = new Book ("Harry Potter and the Deathly Hallows","J.K Rowling", hp7des, "11", "Fantasy", "Amr Books", "hp7.jpg");
 Book b11 = new Book ("The Da Vinci Code", "Dan Brown", davinci, "12","Thriller","Yasmin Books","davinci.jpg");
 Book b12 = new Book ("The Lost Symbol", "Dan Brown", symbol, "13","Thriller","Yasmin Books","symbol.jpg");
 Book b13 = new Book ("Men are from Mars, Women are from Venus", "John Gray",women,"14","Self-Help","Sarah Books","women.jpg");
@@ -171,10 +171,13 @@ Book b20 = new Book ("I Am Malala", "Malala Yousafzai",malala,"21","Biography","
 Book b21 = new Book ("The Diary of a Young Girl", "Anne Frank",anne,"22","Biography","Yasmin Books","anne frank.jpg");
 Book b22 = new Book ("The Girl with the Dragon Tattoo","Stieg Larsson",tattoo,"23","Thriller","Sarah Books","tattoo.jpg");
 
-Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr","123");
-  Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay","456");
-  Borrower a3 = new Borrower("Amr","ExtremleyAyman","","a","3","salah","789");
-  
+Borrower a1 = new Borrower("Amr","Ayman","1/10/1996","amr_ayman@gmail.com","1","amr","123");
+Borrower a2 = new Borrower("Loay","Hamdy","6/10/1996","loay_hamdy@gmail.com","2","loay","456");
+Borrower a3 = new Borrower("Ahmed","Salah","10/1/1996","ahmed_salah@hotmail.com","3","salah","789");
+ 
+Borrower l1 = new Borrower ("Yasmin", "Essam","14/6/1996","yasmin_essam@gmail.com","10","yasmin","123");
+Borrower l2 = new Borrower ("Mirna", "Nagy","24/12/1995","mirna_nagy@hotmail.com","11","mirna","456");
+Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.com","12","sarah","789");
   
 //Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr");
 //  Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay");
@@ -183,6 +186,11 @@ Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr","123");
   users.add(a1);
   users.add(a2);
   users.add(a3);
+  
+  librarians.add(l1);
+  librarians.add(l2);
+  librarians.add(l3);
+  
   bookList.add(b);
   bookList.add(b1);
   bookList.add(b2);
