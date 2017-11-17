@@ -25,6 +25,26 @@ import javafx.stage.StageStyle;
  *
  * @author ahmedsalah
  */
+
+
+ class MyRunnable implements Runnable {
+
+    private int var;
+
+    public MyRunnable(int var) {
+        this.var = var;
+    }
+
+    public void run() {
+     
+    }
+}
+
+
+
+
+
+
 public class Library extends Application {
     
      public static ArrayList<Book> bookList = new ArrayList<Book>();
