@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="526.0" style="-fx-background-color: rgba(45,52,71,0.6);" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.LoginController">
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="603.0" style="-fx-background-color: rgba(45,52,71,0.6);" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.LoginController">
    <children>
-      <AnchorPane id="AnchorPane" fx:id="pane" layoutX="3.0" layoutY="34.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="534.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css">
+      <AnchorPane id="AnchorPane" fx:id="pane" layoutX="12.0" layoutY="39.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="595.0" style="-fx-background-color: #2d3447;" stylesheets="@main.css">
          <children>
             <JFXButton layoutX="97.0" layoutY="401.0" onAction="#handleBorrowerButtonAction" prefHeight="33.0" prefWidth="150.0" ripplerFill="#535252" style="-fx-background-color: #2d3447;" text="Sign in as Borrower" textFill="#a0a2ab">
                <font>
@@ -33,7 +33,7 @@
                   <Font size="14.0" />
                </font>
             </JFXPasswordField>
-            <ImageView fitHeight="113.0" fitWidth="194.0" layoutX="196.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="113.0" fitWidth="194.0" layoutX="21.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@books.png" />
                </image>
@@ -48,14 +48,29 @@
                   <Image url="@locked.png" />
                </image>
             </ImageView>
-            <Label layoutX="253.0" layoutY="155.0" text="Lib" textFill="#42cdaf">
+            <Label layoutX="78.0" layoutY="154.0" text="Lib" textFill="#42cdaf">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label layoutX="212.0" layoutY="155.0" text="Yo" textFill="#6876d9">
+            <Label layoutX="37.0" layoutY="154.0" text="Yo" textFill="#6876d9">
                <font>
                   <Font size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="306.0" fitWidth="232.0" layoutX="349.0" layoutY="194.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pointing.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="177.0" fitWidth="204.0" layoutX="274.0" layoutY="79.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@chat.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="304.0" layoutY="127.0" prefHeight="70.0" prefWidth="124.0" text="Login" textFill="#42cdaf">
+               <font>
+                  <Font size="46.0" />
                </font>
             </Label>
          </children>

@@ -6,13 +6,14 @@
 package library;
 
 import insidefx.undecorator.Undecorator;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.collections.FXCollections;
-import javafx.event.*;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.Stage;
@@ -20,26 +21,105 @@ import javafx.collections.ObservableList;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.stage.StageStyle;
-
+import com.google.gson.Gson;
+import com.google.gson.reflect.*;
+import javax.swing.text.html.HTML;
 /**
  *
  * @author ahmedsalah
  */
 
 
- class MyRunnable implements Runnable {
+ class read implements Runnable {
 
-    private int var;
-
-    public MyRunnable(int var) {
-        this.var = var;
+    public read() {
     }
 
     public void run() {
-     
+        Gson gson=new Gson();
+        Type type=new TypeToken<ArrayList<Borrower>>(){}.getType();
+        String json=gson.toJson(Library.users,type);
+        try{
+            BufferedReader br=new BufferedReader(new FileReader("users.json"));
+            Library.users=new ArrayList(gson.fromJson(br,type));  
+            br.close();
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
+        json=gson.toJson(Library.librarians,type);
+        try{
+            BufferedReader br=new BufferedReader(new FileReader("librarians.json"));
+            Library.librarians=new ArrayList(gson.fromJson(br,type));  
+            br.close();
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
+        type=new TypeToken<ArrayList<borrowItem>>(){}.getType();
+        json=gson.toJson(Library.librarians,type);
+        try{
+            BufferedReader br=new BufferedReader(new FileReader("borrowList.json"));
+            Library.borrowList=new ArrayList(gson.fromJson(br,type));  
+            br.close();
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
+//        type=new TypeToken<ArrayList<Book>>(){}.getType();
+//        json=gson.toJson(Library.bookList,type);
+//        try{
+//            BufferedReader br=new BufferedReader(new FileReader("bookList.json"));
+//            Library.bookList=new ArrayList(gson.fromJson(br,type));  
+//            br.close();
+//        }
+//        catch(Exception e){
+//            e.getMessage();
+//        }
     }
 }
+class write implements Runnable {
 
+    public write() {
+    }
+
+    public void run() {
+        Gson gson=new Gson();
+        Type type=new TypeToken<ArrayList<Borrower>>(){}.getType();
+        String json=gson.toJson(Library.users,type);
+        try (FileWriter fw = new FileWriter("users.json")) {
+                fw.write(json);
+            }
+        catch(Exception e){
+            e.getMessage();
+        }
+        json=gson.toJson(Library.librarians,type);
+        try (FileWriter fw = new FileWriter("librarians.json")) {
+                fw.write(json);
+            }
+        catch(Exception e){
+            e.getMessage();
+        }
+        Type type2=new TypeToken<ArrayList<borrowItem>>(){}.getType();
+        json=gson.toJson(Library.borrowList,type2);
+        try (FileWriter fw = new FileWriter("borrowList.json")) {
+                fw.write(json);
+            }
+        catch(Exception e){
+            e.getMessage();
+        }
+//        System.out.println("here");
+//        Type type1=new TypeToken<ArrayList<Book>>(){}.getType();
+//        json=gson.toJson(Library.bookList,type1);
+//        try (FileWriter fw = new FileWriter("bookList.json")) {
+//                fw.write(json);
+//            }
+//        catch(Exception e){
+//            e.getMessage();
+//        }
+        
+    }
+}
 
 
 
@@ -49,7 +129,7 @@ public class Library extends Application {
     
      public static ArrayList<Book> bookList = new ArrayList<Book>();
      public static ArrayList<Borrower> users = new ArrayList<Borrower>();
-      public static ArrayList<Borrower> librarians = new ArrayList<Borrower>();
+     public static ArrayList<Borrower> librarians = new ArrayList<Borrower>();
      public static ArrayList<borrowItem> borrowList = new ArrayList<borrowItem>();
      public ObservableList<info> search(String str){
       str.toLowerCase();
@@ -75,7 +155,7 @@ public class Library extends Application {
      @Override
     public void start(Stage stage) throws Exception {
 
-        
+
       Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
         
@@ -167,7 +247,7 @@ String tattoo="A spellbinding amalgam of murder mystery, family saga, love story
 "\n" +
 "It’s about Mikael Blomkvist, a crusading journalist recently at the wrong end of a libel case, hired to get to the bottom of Harriet’s disappearance . . . and about Lisbeth Salander, a twenty-four-year-old pierced and tattooed genius hacker possessed of the hard-earned wisdom of someone twice her age—and a terrifying capacity for ruthlessness to go with it—who assists Blomkvist with the investigation. This unlikely team discovers a vein of nearly unfathomable iniquity running through the Vanger family, astonishing corruption in the highest echelons of Swedish industrialism—and an unexpected connection between themselves.";
 String mesdes = "Introducing one of the most famous characters in literature, Jean Valjean—the noble peasant imprisoned for stealing a loaf of bread—Les Misérables ranks among the greatest novels of all time. In it, Victor Hugo takes readers deep into the Parisian underworld, immerses them in a battle between good and evil, and carries them to the barricades during the uprising of 1832 with a breathtaking realism that is unsurpassed in modern prose. Within his dramatic story are themes that capture the intellect and the emotions: crime and punishment, the relentless persecution of Valjean by Inspector Javert, the desperation of the prostitute Fantine, the amorality of the rogue Thénardier, and the universal desire to escape the prisons of our own minds. Les Misérables gave Victor Hugo a canvas upon which he portrayed his criticism of the French political and judicial systems, but the portrait that resulted is larger than life, epic in scope—an extravagant spectacle that dazzles the senses even as it touches the heart.";
-Book b = new Book("The Three Musketeers","Alexandre Dumas",des,"1","Fiction","Penguin books","threemusket.jpg");
+Book b = new Book("The Three Musketeers","Alexandre Dumas","","1","Fiction","Penguin books","threemusket.jpg");
 Book b1 = new Book("Harry Potter and The Prisoner of Azkaban","JK Rowling",hpdes,"2","Fantasy","Amr books","hp.jpg");
 Book b2 = new Book("Treasure Island","Robert Louis Stevenson",tresdes,"3","Fiction","Amr books","tres.jpg");
 Book b3 = new Book("Seven Habits of Highly Effective People"," Stephen R. Covey",sevdes,"4","Self-Help","Mamdouh books","seven.jpg");
@@ -202,7 +282,7 @@ Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.co
 //Borrower a1 = new Borrower("Amr","Ayman","","a","1","amr");
 //  Borrower a2 = new Borrower("Amr","VeryAyman","","a","2","loay");
 //  Borrower a3 = new Borrower("Amr","ExtremleyAyman","","a","3","salah");
-  
+
   users.add(a1);
   users.add(a2);
   users.add(a3);
@@ -235,7 +315,6 @@ Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.co
          bookList.add(b21);
          bookList.add(b22);
   
-  
  Undecorator undecorator = new Undecorator(stage, (Region) root);
  
 // Default theme
@@ -246,6 +325,8 @@ Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.co
 stage.setScene(scene1);
 stage.show();
         stage.setResizable(false);
+        write wr=new write();
+        wr.run();
     }
 
     /**
@@ -253,7 +334,6 @@ stage.show();
      */
     public static void main(String[] args) {
         launch(args);
+
     }
-    
-    
 }
