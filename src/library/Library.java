@@ -195,7 +195,7 @@ Borrower a1 = new Borrower("Amr","Ayman","1/10/1996","amr_ayman@gmail.com","1","
 Borrower a2 = new Borrower("Loay","Hamdy","6/10/1996","loay_hamdy@gmail.com","2","loay","456");
 Borrower a3 = new Borrower("Ahmed","Salah","10/1/1996","ahmed_salah@hotmail.com","3","salah","789");
  
-Borrower l1 = new Borrower ("Yasmin", "Essam","14/6/1996","yasmin_essam@gmail.com","10","yasmin","123");
+Borrower l1 = new Borrower ("Yasmin", "Essam","14/6/1996","yasmin_essam@gmail.com","10","","");
 Borrower l2 = new Borrower ("Mirna", "Nagy","24/12/1995","mirna_nagy@hotmail.com","11","mirna","456");
 Borrower l3 = new Borrower ("Sarah", "Ashraf","22/2/1996","sarah_ashraf@yahoo.com","12","sarah","789");
   
