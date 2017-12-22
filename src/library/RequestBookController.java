@@ -78,6 +78,9 @@ stage.show();
            }
            else{
                Library.req.add(new bookRequest(bookname.getText(),author.getText()));
+               bookname.clear();
+               author.clear();
+               snack.show("Request submitted.", 3000);
            }
        }
 }
