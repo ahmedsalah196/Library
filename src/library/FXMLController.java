@@ -173,6 +173,65 @@ stage.show();
 
        
         }
+        
+        
+         @FXML
+      private void add(ActionEvent event){
+           FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("add.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+             //FXMLController d = loader.getController();
+             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+                //d.getUser(loginID.getText());
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+         Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+    undecorator.getStylesheets().add("skin/undecorator.css");
+    Scene scene1 = new Scene(undecorator);
+    scene1.setFill(Color.TRANSPARENT);
+    stage.setScene(scene1);
+    stage.show();
+        stage.setResizable(false);
+      }
+      
+      
+      
+       @FXML
+      private void logout(ActionEvent event){
+        FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("login.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+             //FXMLController d = loader.getController();
+             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+                //d.getUser(loginID.getText());
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
+        stage.setResizable(false);
+
+    }
+      
+      
+     
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

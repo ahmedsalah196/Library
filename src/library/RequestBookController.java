@@ -5,6 +5,8 @@
  */
 package library;
 
+import com.jfoenix.controls.JFXSnackbar;
+import com.jfoenix.controls.JFXTextField;
 import insidefx.undecorator.Undecorator;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,6 +17,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -25,7 +29,16 @@ import javafx.stage.Stage;
  * @author Farida Abouish
  */
 public class RequestBookController implements Initializable {
-@FXML
+  
+  @FXML
+    private AnchorPane pane; 
+ @FXML
+    private JFXTextField  bookname;
+  
+  @FXML
+    private JFXTextField author;
+  @FXML
+  
     private void back(ActionEvent event){
         FXMLLoader loader = new FXMLLoader();
            loader.setLocation(getClass().getResource("borrowerInterface_FXML.fxml"));
@@ -54,7 +67,17 @@ stage.show();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+         
     }    
     
+    @FXML
+       private void reg(ActionEvent event){
+            JFXSnackbar snack = new JFXSnackbar(pane);
+           if(bookname.getText().equalsIgnoreCase("")||author.getText().equalsIgnoreCase("")){
+               snack.show("Please enter the data",3000);
+           }
+           else{
+               Library.req.add(new bookRequest(bookname.getText(),author.getText()));
+           }
+       }
 }
