@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="568.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.FXMLController">
+<AnchorPane id="AnchorPane" fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="568.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.FXMLController">
    <children>
       <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="381.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -34,5 +34,11 @@
       <JFXButton layoutX="84.0" layoutY="331.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#openReg" opacity="0.0" prefHeight="96.0" prefWidth="79.0" text=" " />
       <JFXButton layoutX="55.0" layoutY="446.0" onAction="#openReg" text="Register New User" textFill="#a0a2ab" />
       <JFXButton layoutX="68.0" layoutY="29.0" onAction="#handleListButtonAction" opacity="0.0" prefHeight="128.0" prefWidth="128.0" text=" " />
+      <ImageView fitHeight="110.0" fitWidth="146.0" layoutX="229.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true"> <image>
+            <Image url="@book-flat.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="add" layoutX="236.0" layoutY="344.0" onAction="#add" text="Add New Book" textFill="#c6b9b9" />
+      <JFXButton layoutX="255.0" layoutY="158.0" onAction="#logout" text="Log Out" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -57,6 +57,11 @@ public static Borrower librarian = null;
 
         //FXMLController d = loader.getController();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        if(loginID.getText()==null||loginPassword.getText()==null){
+            
+             snack.show("Please enter the data",3000);
+             return;
+        }
 
         for(int i = 0; i < Library.librarians.size(); i++) {
             if (loginID.getText().equalsIgnoreCase(Library.librarians.get(i).Username)) {
@@ -76,6 +81,7 @@ public static Borrower librarian = null;
                 } else {
                     System.out.println("NOO");
                     snack.show("Invalid Password",3000);
+                    return;
 
                 }
                 break;
@@ -83,6 +89,7 @@ public static Borrower librarian = null;
             if(i== Library.librarians.size()-1)
             {
                snack.show("Invalid Username",3000);
+               return;
             }
         }
 
@@ -114,6 +121,12 @@ public static Borrower librarian = null;
         BorrowerInterface_FXMLController d = loader.getController();
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
+           if(loginID.getText().equalsIgnoreCase("")||loginPassword.getText().equalsIgnoreCase("")){
+            
+             snack.show("Please enter the data",3000);
+            return;
+        }
 
         for(int i = 0; i < Library.users.size(); i++) {
             if (loginID.getText().equalsIgnoreCase(Library.users.get(i).Username)) {
@@ -133,6 +146,7 @@ public static Borrower librarian = null;
                 } else {
                     System.out.println("NOO");
                     snack.show("Invalid Password",3000);
+                    return;
 
                 }
                 break;
@@ -140,6 +154,7 @@ public static Borrower librarian = null;
             if(i== Library.users.size()-1)
             {
                snack.show("Invalid Username",3000);
+               return;
             }
         }
 

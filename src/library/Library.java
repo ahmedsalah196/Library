@@ -131,6 +131,7 @@ public class Library extends Application {
      public static ArrayList<Borrower> users = new ArrayList<Borrower>();
      public static ArrayList<Borrower> librarians = new ArrayList<Borrower>();
      public static ArrayList<borrowItem> borrowList = new ArrayList<borrowItem>();
+       public static ObservableList <bookRequest> req =FXCollections.observableArrayList();
      public ObservableList<info> search(String str){
       str.toLowerCase();
      ObservableList<info> searched= FXCollections.observableArrayList();
@@ -155,7 +156,10 @@ public class Library extends Application {
      @Override
     public void start(Stage stage) throws Exception {
 
-
+  req.add(new bookRequest("The FellowShip of The Ring","JRR Tolkien"));
+   req.add(new bookRequest("The Two Towers","JRR Tolkien"));
+    req.add(new bookRequest("The Return of The King","JRR Tolkien"));
+    req.add(new bookRequest("Agile","Dr Ahmed Hassan"));
       Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
         

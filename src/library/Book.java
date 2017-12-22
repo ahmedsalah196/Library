@@ -27,6 +27,7 @@ public class Book {
     public Calendar borrowDate;
     public Calendar returnDate;
     public Boolean available = true;
+    public boolean created;
     
     
     
@@ -41,6 +42,21 @@ public class Book {
         this.Genre = g;
         this.Publisher = p;
     }
+    
+    
+      public Book (String t , String a , String d , String i ,String g,String p, Image image,boolean b){
+        
+        this.cover = "c";
+         this.image =image;
+        this.Title = t;
+        this.Author = a;
+        this.Description = d;
+        this.ISBN = i;
+        this.Genre = g;
+        this.Publisher = p;
+        this.created = b;
+    }
+    
     public void load() throws FileNotFoundException {  
         this.image = new Image(new FileInputStream("/library/"+image));
      

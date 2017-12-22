@@ -137,19 +137,6 @@ stage.show();
 
        
          
-//    public void getUser(String id) {
-//
-//        for (Borrower in : Library.users) {
-//            //System.out.println(id);
-//            if (in.Username.equalsIgnoreCase(id)) {
-//                 a = in;
-//                break;
-//            }
-//        }
-//
-//        System.out.println("hi");
-//    }
-    ////////////////////////////////////////////////////
 
     public Borrower getUser(String id) {
 
@@ -171,27 +158,44 @@ stage.show();
          return a;
     }
     
-//    public void getPassword(String ps)
-//    {
-//         for(Borrower in:Library.users){
-//            //System.out.println(id);
-//            if(in.password.equalsIgnoreCase(ps)){
-//               a = in;
-//              
-//               break;
-//            }
-//        }
-//        
-//         System.out.println("hi");
-//     
-//        for(Borrower in:Library.users){
-//          System.out.println(in.password);
-//        }
-//    }
+
   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
+    @FXML
+      private void logout(ActionEvent event){
+        FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("login.fxml"));
+         try {
+             loader.load();       
+        } catch(Exception e) {
+           e.printStackTrace();
+          }
+         
+             //FXMLController d = loader.getController();
+             Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+                //d.getUser(loginID.getText());
+                //System.out.println(loginID.getText());
+         Parent root1 = loader.getRoot();            
+            Undecorator undecorator = new Undecorator(stage, (Region) root1);
+ 
+// Default theme
+ undecorator.getStylesheets().add("skin/undecorator.css");
+ Scene scene1 = new Scene(undecorator);
+ scene1.setFill(Color.TRANSPARENT);
+stage.setScene(scene1);
+stage.show();
+        stage.setResizable(false);
+
+    }
+      
+      
+     
+    
 }
+
+
+
